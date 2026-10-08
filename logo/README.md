@@ -20,6 +20,7 @@ A-klassik/ ja B-kaarid/
   leola-…-L-….svg                              L-märk (favicon, väga väikesed kohad)
   png/                                         samad failid PNG-na, läbipaistva taustaga
   pdf/                                         kuldne logo tumedal taustal, A4 (ainult A, vektor)
+                                               sama pildina: png/leola-klassik-…-kuld-mustal.png
   favicon/                                     favicon.ico, favicon.svg, apple-touch-icon.png, icon-192/512.png
   sotsiaalmeedia/                              profiilipilt 1080×1080, lingi jagamispilt 1200×630
 eelvaated/                                     ukse ja veebilehe näidispildid

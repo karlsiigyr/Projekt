@@ -63,10 +63,15 @@ def export_set(folder, prefix, marks):
             write(os.path.join(folder, "png", base + ".png"), png(svg, pw, ph))
 
 
-def pdf_on_black(path, shape):
-    """Vector PDF, A4 landscape: the gold logo centred on the dark background."""
+def on_black(folder, base, shape):
+    """A4 landscape sheet, the gold logo centred on the dark background:
+    a vector PDF and the same as a 300 dpi PNG (for viewers that show only pictures)."""
     svg = svg_text(shape, COLORS["kuld"], bg=BLACK_BG, size=(2970, 2100, 0.74), dims=("297mm", "210mm"))
-    write(path, cairosvg.svg2pdf(bytestring=svg.encode()))
+    write(os.path.join(folder, "pdf", base + ".pdf"), cairosvg.svg2pdf(bytestring=svg.encode()))
+    im = Image.open(io.BytesIO(png(svg, 3508, 2480))).convert("RGB")  # opaque: it has its own background
+    buf = io.BytesIO()
+    im.save(buf, "PNG", optimize=True)
+    write(os.path.join(folder, "png", base + ".png"), buf.getvalue())
 
 
 def favicons(folder, mark):
@@ -105,8 +110,8 @@ def main():
     })
     favicons(a, L.script_name("L"))
     social(a, "leola-klassik-", seal_a, klassik)
-    pdf_on_black(os.path.join(a, "pdf", "leola-klassik-kuld-mustal.pdf"), klassik)
-    pdf_on_black(os.path.join(a, "pdf", "leola-klassik-horisontaalne-kuld-mustal.pdf"), klassik_compact)
+    on_black(a, "leola-klassik-kuld-mustal", klassik)
+    on_black(a, "leola-klassik-horisontaalne-kuld-mustal", klassik_compact)
 
     b = os.path.join(ROOT, "B-kaarid")
     kaarid = L.lockup_kaarid()
