@@ -22,8 +22,9 @@ COLORS = {
 BLACK_BG = "#121212"
 
 
-def svg_text(shape, fill, pad=0.04, bg=None, size=None, title="Leola meestejuuksur"):
-    """Tight viewBox around the outline with a little air; optional square canvas."""
+def svg_text(shape, fill, pad=0.04, bg=None, size=None, dims=None, title="Leola meestejuuksur"):
+    """Tight viewBox around the outline with a little air; or centred on a fixed canvas.
+    dims: physical width/height strings (e.g. "297mm") instead of pixel sizes."""
     b = shape.bounds
     w, h = b[2] - b[0], b[3] - b[1]
     if size:  # centred on a fixed canvas (W, H, fraction of canvas the mark may use)
@@ -35,8 +36,9 @@ def svg_text(shape, fill, pad=0.04, bg=None, size=None, title="Leola meestejuuks
         W, H = w + 2 * p, h + 2 * p
         g = shape.moved(p - b[0], p - b[1])
     bg_rect = f'<rect width="100%" height="100%" fill="{bg}"/>' if bg else ""
+    dw, dh = dims or (f"{W:.0f}", f"{H:.0f}")
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
-            f'width="{W:.0f}" height="{H:.0f}"><title>{title}</title>{bg_rect}'
+            f'width="{dw}" height="{dh}"><title>{title}</title>{bg_rect}'
             f'<path fill="{fill}" d="{g.d(2)}"/></svg>\n')
 
 
@@ -59,6 +61,12 @@ def export_set(folder, prefix, marks):
             svg = svg_text(shape, col)
             write(os.path.join(folder, base + ".svg"), svg)
             write(os.path.join(folder, "png", base + ".png"), png(svg, pw, ph))
+
+
+def pdf_on_black(path, shape):
+    """Vector PDF, A4 landscape: the gold logo centred on the dark background."""
+    svg = svg_text(shape, COLORS["kuld"], bg=BLACK_BG, size=(2970, 2100, 0.74), dims=("297mm", "210mm"))
+    write(path, cairosvg.svg2pdf(bytestring=svg.encode()))
 
 
 def favicons(folder, mark):
@@ -85,16 +93,20 @@ def social(folder, prefix, seal, lockup):
 def main():
     a = os.path.join(ROOT, "A-klassik")
     klassik = L.lockup_klassik()
+    klassik_compact = L.lockup_klassik_compact()
     seal_a = L.seal_klassik()
     export_set(a, "leola-klassik", {
         "": (klassik, 3000, None),
         "-nimi": (L.script_name(), 3000, None),
-        "-vertikaalne": (L.vertical(L.lockup_klassik_compact()), None, 3000),
+        "-horisontaalne": (klassik_compact, 3000, None),
+        "-vertikaalne": (L.vertical(klassik_compact), None, 3000),
         "-pitser": (seal_a, 2000, None),
         "-L": (L.script_name("L"), 1200, None),
     })
     favicons(a, L.script_name("L"))
     social(a, "leola-klassik-", seal_a, klassik)
+    pdf_on_black(os.path.join(a, "pdf", "leola-klassik-kuld-mustal.pdf"), klassik)
+    pdf_on_black(os.path.join(a, "pdf", "leola-klassik-horisontaalne-kuld-mustal.pdf"), klassik_compact)
 
     b = os.path.join(ROOT, "B-kaarid")
     kaarid = L.lockup_kaarid()

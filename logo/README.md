@@ -14,10 +14,12 @@ Kõik variandid koos ukse- ja veebinäidisega näed, kui avad brauseris faili **
 A-klassik/ ja B-kaarid/
   leola-…-must.svg / -valge.svg / -kuld.svg    põhilogo
   leola-…-nimi-….svg                           ainult nimi (veebi päis, väikesed kohad)
+  leola-klassik-horisontaalne-….svg            nimi, MEESTEJUUKSUR paremale joondatult all (ainult A)
   leola-…-vertikaalne-….svg                    kitsas riba uksel või aknal, loetakse ülevalt alla
   leola-…-pitser-….svg                         ümmargune märk (kleebis, tempel, kinkekaart)
   leola-…-L-….svg                              L-märk (favicon, väga väikesed kohad)
   png/                                         samad failid PNG-na, läbipaistva taustaga
+  pdf/                                         kuldne logo tumedal taustal, A4 (ainult A, vektor)
   favicon/                                     favicon.ico, favicon.svg, apple-touch-icon.png, icon-192/512.png
   sotsiaalmeedia/                              profiilipilt 1080×1080, lingi jagamispilt 1200×630
 eelvaated/                                     ukse ja veebilehe näidispildid
@@ -65,6 +67,7 @@ Kuld näeb kõige parem välja mustal või väga tumedal taustal. Heledal tausta
   | A põhilogo | 45 cm |
   | B põhilogo | 40 cm |
   | A ainult nimi | 8 cm |
+  | A horisontaalne | 32 cm |
   | B ainult nimi | 22 cm |
   | Pitser | 18 cm läbimõõt |
   | Vertikaalne | A 32 cm, B 40 cm kõrge |
