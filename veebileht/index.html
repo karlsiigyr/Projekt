@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leola Meestejuuksur · soodne meestejuuksur Viljandi kesklinnas</title>
+<meta name="description" content="Leola on soodsate hindadega meestejuuksur Viljandi kesklinnas, kuhu võib tulla ka elavas järjekorras. Aastast 1996. C. R. Jakobsoni 11, 2. korrus, tel 433 3242.">
+<meta name="theme-color" content="#111214">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="et_EE">
+<meta property="og:title" content="Leola Meestejuuksur Viljandis">
+<meta property="og:description" content="Soodsate hindadega meestejuuksur Viljandi kesklinnas. Broneeri aeg või tule elavas järjekorras. Aastast 1996.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111214'/%3E%3Crect x='14' y='18' width='36' height='8' rx='4' fill='%23cdd1d9'/%3E%3Crect x='14' y='28' width='36' height='8' rx='4' fill='%23fbfbfc'/%3E%3Crect x='10' y='40' width='44' height='6' rx='2' fill='%23fbfbfc'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Michroma&display=swap" rel="stylesheet">
+<script>
+  // Sisu on nähtav ka ilma skriptita; skript lisab ainult liikumise. Kui miski takerdub, ilmub kõik 3 sekundi pärast.
+  document.documentElement.classList.add("js");
+  setTimeout(function () { document.documentElement.classList.add("is-in"); }, 3000);
+</script>
+<style>
+  /* ---------- the room's own colours: light wall greys and shelf black; the floor closes the page ---------- */
+  :root {
+    --wall: #eceef1;
+    --wall-light: #f4f5f7;
+    --paper: #fbfbfc;
+    --towel: #dcdfe5;
+    --room: #cdd1d9;
+    --room-deep: #bcc1cb;
+    --ink: #111214;
+    --ink-2: #3a3c44;
+    --ink-3: #5a5d67;
+    --floor: #25262a;
+    --floor-2: #303137;
+    --on-floor: #eceef2;
+    --on-floor-2: #a9acb6;
+    --alert: #a3260f;
+    --font-display: "Michroma", "Eurostile Extended", "Microgramma D Extended", "Arial Black", sans-serif;
+    --font-text: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --pad: clamp(1.25rem, 4vw, 3rem);
+    --section: clamp(4.5rem, 9vw, 8.5rem);
+    --nav-h: 4rem;
+    --dock-h: 0rem;
+    --r: 0.875rem;
+    --r-s: 0.625rem;
+    --r-xs: 0.25rem;
+    --r-l: 1.25rem;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scrollbar-color: var(--ink-3) var(--wall); }
+  body { margin: 0; background: var(--wall); color: var(--ink); font: 400 1.0625rem/1.55 var(--font-text); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  ::selection { background: var(--ink); color: var(--paper); }
+  img, svg, video { display: block; max-width: 100%; }
+  img { height: auto; }
+  h1, h2, h3, p, ul, ol, dl, dd, figure, fieldset { margin: 0; padding: 0; }
+  ul, ol { list-style: none; }
+  fieldset { border: 0; min-width: 0; }
+  a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.22em; }
+  button, input { font: inherit; color: inherit; }
+  /* pressed things answer in the page's own greys (see :active), not in the browser's blue flash */
+  a, button, input, label { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: var(--r-xs); }
+  .on-dark :focus-visible, .on-dark:focus-visible { outline-color: var(--paper); }
+  /* a section reached by a link takes focus for the keyboard's sake, without a ring around the whole section */
+  [tabindex="-1"]:focus-visible { outline: none; }
+  .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .skip { position: fixed; left: 1rem; top: -4rem; z-index: 90; padding: 0.7rem 1rem; border-radius: var(--r); background: var(--ink); color: var(--paper); font-weight: 600; text-decoration: none; transition: top 0.2s; }
+  .skip:focus { top: 1rem; }
+  .i { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .wrap { width: min(100% - 2 * var(--pad), 76rem); margin-inline: auto; }
+  main > section { scroll-margin-top: var(--nav-h); }
+  #kaart, #asukoht { scroll-margin-top: calc(var(--nav-h) + 1rem); }
+
+  /* ---------- type: the door's wide lettering for display, Archivo for reading ---------- */
+  .d1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 2.3vw + 1rem, 3rem); line-height: 1.14; letter-spacing: -0.02em; text-wrap: balance; }
+  .d1--xl { font-size: clamp(1.75rem, 3.6vw + 0.9rem, 4rem); line-height: 1.08; }
+  .lead { max-width: 34rem; font-size: clamp(1.0625rem, 0.4vw + 1rem, 1.25rem); line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+  .eur { font-family: var(--font-text); font-weight: 500; }
+
+  /* ---------- the one module: folded blocks stacked on a black shelf ---------- */
+  .stack { display: grid; gap: 5px; }
+  .block { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.75rem; padding: 0.75rem 1.2rem; border-radius: var(--r); background: var(--paper); color: var(--ink); text-decoration: none; transition: background-color 0.25s, color 0.25s; }
+  a.block { cursor: pointer; }
+  a.block:active { background: var(--room-deep); }
+  @media (hover: hover) { a.block:hover { background: var(--room); } }
+  /* the live block carries a small dot while the salon is open */
+  .block.is-live [data-state-label]::before { content: ""; display: inline-block; width: 0.6rem; height: 0.6rem; margin: 0 0.6rem 0 0.25rem; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 0.25rem rgba(17, 18, 20, 0.14); vertical-align: 0.06em; }
+  .shelf { height: 0.875rem; margin: 6px -0.6rem 0; border-radius: var(--r-xs); background: var(--ink); box-shadow: 0 1.1rem 1.4rem -0.9rem rgba(17, 18, 20, 0.5); }
+  .standing { display: grid; }
+  .standing img { width: 100%; height: auto; border-radius: var(--r); background: var(--towel); }
+  .frame { overflow: hidden; border-radius: var(--r); background: var(--towel); }
+  .frame img { border-radius: 0; }
+
+  /* ---------- actions: black on the light wall, light on the dark pictures; chosen things turn black ---------- */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6em; min-height: 3.25rem; padding: 0.7rem 1.45rem; border: 0; border-radius: var(--r); font: 600 1rem/1.1 var(--font-text); text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color 0.25s, color 0.25s, box-shadow 0.25s; }
+  .btn:active { transform: translateY(1px); }
+  .btn--main { background: var(--ink); color: var(--paper); }
+  .on-dark .btn--main { background: var(--paper); color: var(--ink); }
+  .btn--ink { background: var(--ink); color: var(--paper); }
+  .btn--line { background: transparent; color: inherit; box-shadow: inset 0 0 0 1.5px currentColor; }
+  @media (hover: hover) {
+    .btn--main:hover, .btn--ink:hover { background: var(--ink-2); }
+    .on-dark .btn--main:hover { background: var(--room); color: var(--ink); }
+    .btn--line:hover { background: var(--ink); color: var(--paper); box-shadow: inset 0 0 0 1.5px var(--ink); }
+    .on-dark .btn--line:hover { background: var(--paper); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--paper); }
+  }
+  .link { display: inline-flex; align-items: center; gap: 0.45em; font-weight: 600; text-decoration: underline; }
+  .link .i { transition: transform 0.4s var(--ease); }
+  @media (hover: hover) { .link:hover .i { transform: translate(2px, -2px); } }
+
+  /* ---------- top bar ---------- */
+  .nav { position: fixed; inset: 0 0 auto 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: var(--nav-h); padding: 0 var(--pad); color: var(--paper); transition: background-color 0.4s, color 0.4s, box-shadow 0.4s; }
+  .nav.is-solid { background: var(--wall); color: var(--ink); box-shadow: 0 1px 0 rgba(17, 18, 20, 0.12); }
+  .nav__brand { display: block; width: 5.5rem; fill: currentColor; opacity: 0; visibility: hidden; transition: opacity 0.4s, visibility 0s 0.4s; }
+  .nav.has-brand .nav__brand { opacity: 1; visibility: visible; transition: opacity 0.4s, visibility 0s; }
+  .nav__brand svg { width: 100%; height: auto; }
+  .nav__side { display: flex; align-items: center; gap: clamp(0.9rem, 2vw, 1.75rem); margin-left: auto; }
+  .nav__links { display: none; gap: clamp(1rem, 2vw, 1.75rem); font-size: 0.9375rem; font-weight: 500; }
+  .nav__links a { text-decoration: none; padding: 0.4rem 0; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat; transition: background-size 0.4s var(--ease); }
+  @media (hover: hover) { .nav__links a:hover { background-size: 100% 1.5px; } }
+  .nav__tel { display: none; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .nav .btn { min-height: 2.6rem; padding: 0.5rem 1.05rem; font-size: 0.9375rem; }
+  @media (min-width: 56em) {
+    :root { --nav-h: 4.5rem; }
+    .nav__links { display: flex; }
+    .nav__tel { display: inline; }
+  }
+
+  /* ---------- first screen: three slow films of the studio, the white logo, three blocks on the first shelf ---------- */
+  .hero { position: relative; isolation: isolate; display: grid; grid-template-rows: 1fr auto; min-height: max(100svh, 38rem); padding-top: var(--nav-h); color: var(--paper); background: var(--ink); }
+  .hero__media { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+  .hero__still, .hero__film { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  /* three stills cross-fade and drift slowly; they are the picture until the film plays, and for reduced motion */
+  .hero__still { opacity: 0; animation: hero-still 24s linear infinite; }
+  .hero__still--2 { animation-delay: 8s; }
+  .hero__still--3 { animation-delay: 16s; }
+  .hero__still--1 { animation-name: hero-still-first; }
+  .hero__still--1 { --from: scale(1.04) translate3d(1%, 0, 0); --to: scale(1.12) translate3d(-1.5%, 0.5%, 0); }
+  .hero__still--2 { --from: scale(1.1) translate3d(-1.5%, 0, 0); --to: scale(1.04) translate3d(1.5%, 0, 0); }
+  .hero__still--3 { --from: scale(1.04) translate3d(0, 1.5%, 0); --to: scale(1.12) translate3d(0, -1%, 0); }
+  @keyframes hero-still { 0% { opacity: 0; transform: var(--from); } 5% { opacity: 1; } 33.33% { opacity: 1; } 38.5% { opacity: 0; transform: var(--to); } 100% { opacity: 0; transform: var(--to); } }
+  @keyframes hero-still-first { 0% { opacity: 1; transform: var(--from); } 33.33% { opacity: 1; } 38.5% { opacity: 0; transform: var(--to); } 94.9% { opacity: 0; transform: var(--from); } 100% { opacity: 1; transform: var(--from); } }
+  .hero__film { opacity: 0; transition: opacity 1.2s ease; }
+  .hero.has-film .hero__film { opacity: 1; }
+  .hero.has-film .hero__still { animation-play-state: paused; }
+  .hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(17, 18, 20, 0.66) 0, rgba(17, 18, 20, 0.44) 46%, rgba(17, 18, 20, 0.22) 100%), linear-gradient(0deg, rgba(17, 18, 20, 0.72) 0, rgba(17, 18, 20, 0) 42%), linear-gradient(180deg, rgba(17, 18, 20, 0.58) 0, rgba(17, 18, 20, 0) 9rem); }
+  .hero__inner { display: grid; align-content: end; justify-items: start; gap: clamp(1.1rem, 2.6svh, 1.75rem); padding-block: clamp(1.5rem, 5svh, 4rem) clamp(1.75rem, 6svh, 4.5rem); }
+  .hero__title { width: min(70vw, 27rem, 42svh); }
+  @media (orientation: portrait) { .hero__shade { background: linear-gradient(0deg, rgba(17, 18, 20, 0.8) 0, rgba(17, 18, 20, 0.5) 62%, rgba(17, 18, 20, 0.2) 100%), linear-gradient(180deg, rgba(17, 18, 20, 0.55) 0, rgba(17, 18, 20, 0) 8rem); } }
+  .logo { width: 100%; height: auto; fill: currentColor; overflow: visible; }
+  .hero__lead { max-width: 30rem; font-size: clamp(1.0625rem, 0.7vw + 0.95rem, 1.375rem); line-height: 1.45; text-wrap: pretty; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .hero__shelf { position: relative; z-index: 1; }
+  .hero__shelf li { display: grid; }
+  .hero__shelf .block { min-height: 5rem; padding-block: 0.8rem; }
+  /* each block: a short label above one large value; the display face has a single weight, so a hairline of its own ink gives it body */
+  .hero__shelf .fact { display: grid; gap: 0.1rem; }
+  .hero__shelf .fact b { font-size: clamp(1.5rem, 1vw + 1.2rem, 1.875rem); line-height: 1.15; -webkit-text-stroke: 0.022em currentColor; }
+  .hero__shelf .fact > span { font-size: clamp(1rem, 0.3vw + 0.95rem, 1.125rem); font-weight: 600; line-height: 1.35; color: var(--ink); }
+  .hero__shelf .shelf { transform: translateY(50%); margin-top: 6px; }
+  .fact { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.1rem 0.6rem; }
+  .fact b { font-family: var(--font-display); font-weight: 400; font-size: 1.0625rem; letter-spacing: -0.01em; white-space: nowrap; }
+  .fact > span { font-size: 0.9375rem; color: var(--ink-2); }
+  .fact > span:empty { display: none; }
+  .block .i { opacity: 0.55; transition: transform 0.4s var(--ease), opacity 0.25s; }
+  @media (hover: hover) { a.block:hover .i { transform: translateX(3px); opacity: 1; } }
+  @media (min-width: 48em) {
+    .hero__shelf .stack { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .hero__shelf .block { min-height: 5.75rem; padding-inline: clamp(1.2rem, 1.8vw, 1.6rem); }
+    .hero__title { width: min(40vw, 30rem, 46svh); }
+  }
+  /* arriving: the logo and words fade up once, the three blocks land on the shelf from the bottom one up */
+  .js:not(.is-in) .hero__inner > *, .js:not(.is-in) .hero__shelf .block { opacity: 0; }
+
+  /* ---------- since 1996 ---------- */
+  .story { padding-block: var(--section); background: var(--wall-light); }
+  .story__grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: end; }
+  .story__text { display: grid; gap: 1.5rem; }
+  .story .stack { margin-top: 1rem; }
+  .story .block { background: var(--wall); }
+  .story .fact { display: grid; grid-template-columns: clamp(8.75rem, 9vw + 6rem, 12rem) minmax(0, 1fr); align-items: baseline; }
+  .story .fact b { font-size: clamp(1.25rem, 1vw + 1rem, 1.625rem); }
+  .story .fact > span { font-size: 1rem; }
+  @media (min-width: 56em) { .story__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); } }
+
+  /* ---------- prices: a stack to pick from ---------- */
+  .prices { padding-block: var(--section) calc(var(--section) * 0.55); }
+  .split { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+  .split__head { display: grid; gap: 1.1rem; align-content: start; }
+  @media (min-width: 56em) { .split { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); } }
+  .svc { min-height: clamp(4.75rem, 3vw + 3.5rem, 5.75rem); padding: 1rem clamp(1.2rem, 2.2vw, 1.9rem); }
+  .svc__name { font-size: clamp(1.125rem, 0.9vw + 0.95rem, 1.5rem); font-weight: 600; }
+  .svc__side { display: flex; align-items: center; gap: clamp(0.75rem, 2vw, 1.5rem); }
+  .svc__price { font-family: var(--font-display); font-size: clamp(1.0625rem, 1.2vw + 0.85rem, 1.75rem); letter-spacing: -0.01em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .svc__go { display: none; align-items: center; gap: 0.4em; font-size: 0.9375rem; font-weight: 600; }
+  @media (min-width: 40em) { .svc__go { display: inline-flex; opacity: 0; transform: translateX(-0.4rem); transition: opacity 0.25s, transform 0.4s var(--ease); } .svc:hover .svc__go, .svc:focus-visible .svc__go { opacity: 1; transform: none; } }
+  .svc__arrow { display: none; }
+  @media (max-width: 39.99em) { .svc__arrow { display: block; } }
+
+  /* ---------- booking: one sheet, chips to choose from ---------- */
+  .book { padding-block: calc(var(--section) * 0.55); }
+  .booking { display: grid; gap: 1.6rem; padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: var(--r-l); background: var(--paper); }
+  .booking__form { display: grid; gap: 1.6rem; }
+  .booking legend { padding: 0; margin-bottom: 0.6rem; font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { position: relative; }
+  .chip input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+  .chip label { display: flex; align-items: baseline; gap: 0.6rem; min-height: 2.9rem; padding: 0.7rem 1rem; border-radius: var(--r-s); background: var(--wall); font-weight: 500; line-height: 1.2; transition: background-color 0.2s, color 0.2s; }
+  .chip label b { font-weight: 400; font-size: 0.9375rem; color: var(--ink-3); transition: color 0.2s; }
+  @media (hover: hover) { .chip input:hover + label { background: var(--towel); } }
+  .chip input:checked + label { background: var(--ink); color: var(--paper); }
+  .chip input:checked + label b { color: var(--room); }
+  .chip input:focus-visible + label { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .chips--times .chip label { min-width: 4.4rem; justify-content: center; font-variant-numeric: tabular-nums; }
+  .fields { display: grid; gap: 1rem; }
+  @media (min-width: 40em) { .fields { grid-template-columns: 1fr 1fr; } }
+  .field { display: grid; gap: 0.4rem; }
+  .field label { font-weight: 600; }
+  .field input { width: 100%; min-height: 3.1rem; padding: 0.7rem 1rem; border: 1.5px solid var(--towel); border-radius: var(--r-s); background: var(--paper); caret-color: var(--ink); transition: border-color 0.2s; }
+  .field input::placeholder { color: var(--ink-3); }
+  .field input:hover { border-color: var(--ink-3); }
+  .field input:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; border-color: var(--ink); }
+  .field input[aria-invalid="true"] { border-color: var(--alert); }
+  .field__err, .booking__err { font-size: 0.9375rem; font-weight: 500; color: var(--alert); }
+  .field__err:empty, .booking__err:empty, .booking__sum:empty { display: none; }
+  .booking__foot { display: grid; gap: 0.9rem; align-items: center; }
+  .booking__sum { font-weight: 500; color: var(--ink-2); }
+  @media (min-width: 40em) { .booking__foot { grid-template-columns: 1fr auto; } }
+  .booking__done { display: grid; gap: 0.9rem; justify-items: start; }
+  .booking__done h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.375rem, 1.4vw + 1rem, 2rem); letter-spacing: -0.02em; }
+  .booking__demo { padding: 0.9rem 1.1rem; border-radius: var(--r-s); background: var(--room); color: var(--ink); font-weight: 500; }
+  [hidden] { display: none !important; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+  /* ---------- the studio: four photographs of one height standing on one long shelf ---------- */
+  .studio { padding-block: calc(var(--section) * 0.55) calc(var(--section) * 0.5); overflow: hidden; }
+  .studio__head { margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem); }
+  .studio__row { display: grid; grid-auto-flow: column; grid-auto-columns: min(72vw, 19rem); gap: 0.75rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad); padding: 0 var(--pad) 0; scrollbar-width: none; }
+  .studio__row::-webkit-scrollbar { display: none; }
+  .studio__row li { scroll-snap-align: start; }
+  .studio__row img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+  .studio .shelf { width: min(100% - 2 * var(--pad) + 1.2rem, 77.2rem); margin-inline: auto; }
+  @media (min-width: 56em) {
+    .studio__row { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); width: min(100% - 2 * var(--pad), 76rem); margin-inline: auto; padding: 0; overflow: visible; }
+  }
+
+  /* ---------- reviews, the way Google shows them ---------- */
+  .voices { padding-block: calc(var(--section) * 0.5) var(--section); }
+  .voices__head { display: grid; gap: 1.25rem; margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+  .rating { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.1rem; }
+  .rating__num { font-family: var(--font-display); font-size: clamp(2rem, 2vw + 1.4rem, 3rem); line-height: 1; letter-spacing: -0.02em; }
+  .stars { position: relative; display: inline-flex; color: var(--towel); }
+  .stars svg { width: 1.3rem; height: 1.3rem; fill: currentColor; }
+  .stars__on { position: absolute; inset: 0; display: flex; width: var(--fill, 100%); overflow: hidden; color: var(--ink); }
+  .stars__on svg { flex: none; }
+  .voices__row { display: grid; gap: 5px; }
+  .review { display: grid; gap: 0.9rem; align-content: start; padding: 1.4rem 1.4rem 1.3rem; border-radius: var(--r); background: var(--paper); }
+  .review__who { display: flex; align-items: center; gap: 0.8rem; }
+  .review__face { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-weight: 600; }
+  .review__name { font-weight: 600; line-height: 1.2; }
+  .review__src { font-size: 0.875rem; color: var(--ink-3); }
+  .review .stars { color: var(--ink); }
+  .review .stars svg { width: 1.05rem; height: 1.05rem; }
+  .review blockquote { margin: 0; font-size: 1.125rem; line-height: 1.45; text-wrap: pretty; }
+  .review .link { font-size: 0.9375rem; }
+  @media (min-width: 48em) { .voices__row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; align-items: end; } .review:nth-child(2) { padding-bottom: 2.6rem; } }
+
+  /* ---------- the floor: hours, the door, the map ---------- */
+  .floor {
+    color: var(--on-floor); background-color: var(--floor);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='s' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 24 0 0 0 -17.3'/%3E%3C/filter%3E%3Crect width='360' height='360' filter='url(%23s)' opacity='0.34'/%3E%3C/svg%3E");
+    background-size: 360px 360px;
+  }
+  .floor ::selection { background: var(--paper); color: var(--ink); }
+  .visit { padding-block: var(--section) clamp(3rem, 6vw, 5rem); }
+  .visit__grid { display: grid; gap: clamp(2.75rem, 6vw, 4.5rem); }
+  .visit__col { display: grid; gap: 1.4rem; align-content: start; }
+  .state { display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 600; }
+  .state::before { content: ""; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--paper); }
+  .state:empty { display: none; }
+  .hours .block { min-height: 3.1rem; padding-block: 0.5rem; background: var(--floor-2); color: var(--on-floor); }
+  .hours dt { font-weight: 500; }
+  .hours dd { font-family: var(--font-display); font-size: 0.9375rem; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .hours .is-off dd { font-family: var(--font-text); font-size: 1rem; color: var(--on-floor-2); }
+  .hours .is-today { background: var(--room); color: var(--ink); }
+  .hours .is-today dt::after { content: "täna"; margin-left: 0.7rem; padding: 0.15rem 0.5rem; border-radius: var(--r-xs); background: var(--ink); color: var(--paper); font-size: 0.8125rem; font-weight: 600; }
+  .hours .is-today.is-off dd { color: var(--ink-2); }
+  .place { display: grid; gap: 1.4rem; }
+  .place address { font-style: normal; font-size: clamp(1.125rem, 0.6vw + 1rem, 1.375rem); line-height: 1.4; }
+  .place__tel { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-size: clamp(1.125rem, 0.8vw + 1rem, 1.5rem); letter-spacing: -0.01em; text-decoration: none; }
+  .place__more { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.9375rem; color: var(--on-floor-2); }
+  .door { width: min(100%, 13rem); height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--r-s); }
+  @media (min-width: 56em) {
+    .place { grid-template-rows: auto auto auto auto minmax(0, 1fr); }
+    .door { width: auto; height: 0; min-height: max(100%, 11rem); }
+  }
+  /* ways out: the maps and the Facebook page wear their own marks, in the page's one ink */
+  .mark { width: 1.3em; height: 1.3em; flex: none; fill: currentColor; }
+  .mark--apple { translate: 0 -0.07em; }
+  .btn--icon { width: 3.25rem; padding: 0; }
+  .btn--icon .mark { width: 1.6em; height: 1.6em; }
+  .go { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.6rem; max-width: 28rem; }
+  .go > :first-child { grid-column: 1 / -1; }
+  @media (min-width: 40em) and (max-width: 55.99em), (min-width: 62em) { .go { display: flex; flex-wrap: wrap; max-width: none; } }
+  .map { position: relative; overflow: hidden; min-height: 24rem; border-radius: var(--r); background: var(--floor-2); }
+  /* the map library sets its own position on this element, so the rule is written to win */
+  .map .map__canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map__note { position: absolute; inset: 0; display: grid; place-items: center; padding: 2rem; text-align: center; color: var(--on-floor-2); transition: opacity 0.6s; }
+  .map.is-live .map__note { opacity: 0; pointer-events: none; }
+  .pin { display: grid; justify-items: center; gap: 0.2rem; }
+  .pin svg { width: 2.4rem; height: 3.1rem; overflow: visible; filter: drop-shadow(0 6px 6px rgba(17, 18, 20, 0.4)); }
+  .pin__label { order: -1; padding: 0.35rem 0.7rem; border-radius: var(--r-s); background: var(--paper); color: var(--ink); font: 600 0.875rem/1.25 var(--font-text); text-align: center; white-space: nowrap; box-shadow: 0 6px 14px -6px rgba(17, 18, 20, 0.55); }
+  .pin__label small { display: block; font-weight: 400; font-size: 0.8125rem; color: var(--ink-2); }
+  .maplibregl-ctrl-group { border-radius: var(--r-s) !important; overflow: hidden; }
+  @media (min-width: 56em) {
+    .visit__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .visit__grid > .map { grid-column: 1 / -1; min-height: 30rem; }
+  }
+  .footer { display: grid; gap: 1.5rem; justify-items: start; padding-block: clamp(2.5rem, 5vw, 4rem) calc(clamp(2rem, 4vw, 3rem) + var(--dock-h) + env(safe-area-inset-bottom, 0px)); border-top: 1px solid rgba(236, 238, 242, 0.14); }
+  .footer__logo { width: 9.5rem; fill: var(--on-floor); }
+  .footer__facts { display: flex; flex-wrap: wrap; gap: 0.4rem 1.75rem; color: var(--on-floor-2); font-size: 0.9375rem; }
+  .footer__facts a { color: var(--on-floor); }
+  .footer__legal { color: var(--on-floor-2); font-size: 0.875rem; }
+
+  /* ---------- phone dock: call and book stay one thumb away ---------- */
+  .dock { position: fixed; inset: auto 0 0 0; z-index: 55; display: grid; grid-template-columns: 1fr 1.35fr; gap: 6px; padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px)); background: var(--wall); box-shadow: 0 -1px 0 rgba(17, 18, 20, 0.12); transform: translateY(110%); transition: transform 0.6s var(--ease); }
+  .dock.is-up { transform: none; }
+  .dock .btn { min-height: 3.1rem; }
+  @media (max-width: 47.99em) { :root { --dock-h: 4.2rem; } }
+  @media (min-width: 48em) { .dock { display: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+    .hero__still { animation: none; }
+    .hero__still--1 { opacity: 1; }
+    .hero__film { display: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#sisu">Liigu sisu juurde</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="lg-script" fill-rule="evenodd" d="M653.8 90.3Q664.6 89 675.8 88.8Q687 88.6 691.5 89.2Q696 89.8 701.5 91.2Q707 92.6 711.5 94.6Q716 96.6 721.5 100.7Q727 104.7 729.7 107.9Q732.4 111 734.4 115Q736.4 119 737.4 123Q738.4 127 738.4 133.5Q738.4 140 737.9 144Q737.4 148 735.3 155.5Q733.3 163 730.8 169Q728.4 175 724.3 182.5Q720.3 190 716.3 196Q712.4 202 706.3 210Q700.3 218 693.3 226Q686.4 234 677.2 243.3Q668 252.6 661.5 258.6Q655 264.5 643 274.5Q631 284.4 624.5 289.3Q618 294.2 602 305.4Q586 316.5 576.5 322.5Q567 328.4 553 336.4Q539 344.4 520 353.9Q501 363.3 489.5 368.3Q478 373.2 466 377.8Q454 382.3 436 387.9Q418 393.4 409.5 395.4Q401 397.4 392 399L383 400.5 372.7 413.8Q362.3 427 354.3 436.5Q346.2 446 338.1 454.8Q330 463.6 320.3 473.3Q310.5 483 304.3 488.7Q298 494.4 287.5 502.9Q277 511.3 268.5 517.2Q260 523.1 252 527.9Q244 532.7 243.4 533.4L242.8 534 251.4 536.7Q260 539.4 268 541.3Q276 543.2 287 545.3Q298 547.4 305 548.3Q312 549.3 330 550.8Q348 552.4 364.5 552.7Q381 553 392 552.7Q403 552.4 409 551.8Q415 551.3 423 549.9Q431 548.5 438 546.5Q445 544.4 450.5 542.3Q456 540.2 461 537.9Q466 535.5 469.5 533.4Q473 531.2 482 524.1Q491 516.9 492 516.3Q493 515.7 494.5 515.6Q496 515.5 497.5 516.1Q499 516.7 499.8 517.9Q500.5 519 500.9 521Q501.3 523 500.7 525Q500.1 527 498.2 530Q496.3 533 495.2 534.3Q494 535.5 487.5 540.9Q481 546.2 476.5 549.4Q472 552.5 465 556.5Q458 560.5 453.5 562.5Q449 564.5 443.5 566.4Q438 568.3 429.5 570.4Q421 572.5 412 573.9Q403 575.3 395.5 575.9Q388 576.5 383 576.6Q378 576.6 373 576.6Q368 576.5 360 575.9Q352 575.3 341 573.8Q330 572.3 319.5 570.3Q309 568.4 291 564.4Q273 560.4 245.5 553.2L218 545.9 211.5 548.6Q205 551.2 197.5 553.8Q190 556.3 176 559.8Q162 563.3 148.5 565.3Q135 567.3 127 567.9Q119 568.5 113 568.6Q107 568.7 95.5 568.6Q84 568.5 78 567.9Q72 567.3 64 565.8Q56 564.3 50.5 562.3Q45 560.4 42 558.8Q39 557.3 35.5 554.9Q32 552.5 29.4 549.8Q26.7 547 25.2 543.5Q23.7 540 23.7 537.5Q23.6 535 24.7 531Q25.7 527 28.9 522.8Q32 518.6 36 515.6Q40 512.6 45 510.2Q50 507.8 56.5 505.8Q63 503.7 68.5 502.7Q74 501.6 84 500.7Q94 499.8 101 499.7Q108 499.6 123.5 501.1Q139 502.6 149 504.6Q159 506.6 166.5 508.6Q174 510.6 187 514.6Q200 518.5 205 520.4Q210 522.2 211.5 522.4L213 522.5 219 518.3Q225 514.1 231.5 508.7Q238 503.2 245.5 496.1Q253 489 259.7 482Q266.4 475 280.4 458.5Q294.4 442 308.3 424Q322.2 406 322.6 404.9L323 403.8 309.5 402.6Q296 401.4 283 398.9Q270 396.3 259 392.9Q248 389.4 239 385.4Q230 381.4 221 375.9Q212 370.3 206.5 365.9Q201 361.5 194.8 354.8Q188.5 348 184.7 342Q180.9 336 178.2 329.5Q175.5 323 174.1 316Q172.6 309 172.4 303.5Q172.1 298 172.4 292.5Q172.6 287 174.6 278Q176.6 269 178.1 265Q179.6 261 182.3 255.5Q184.9 250 188.3 244.5Q191.7 239 194.3 235.5Q196.8 232 203.9 224.2Q211 216.3 214 213.5Q217 210.6 222 206.6Q227 202.6 230.5 200.1Q234 197.7 241 193.6Q248 189.5 257 185.6Q266 181.6 271 180.1Q276 178.7 284 177.3Q292 175.8 300 175.3Q308 174.7 311.5 175.3Q315 175.9 316.6 177.5L318.2 179 318.4 182L318.5 185 317.8 186.1Q317 187.2 316 187.8Q315 188.4 313 188.9Q311 189.4 304 190.1Q297 190.8 290 192.2Q283 193.5 276.5 195.6Q270 197.7 265.5 199.6Q261 201.6 256.5 204.2Q252 206.8 248.5 209.3Q245 211.8 241.5 214.7Q238 217.6 233.3 222.3Q228.6 227 224.1 233Q219.6 239 218.2 241.5Q216.7 244 214.7 248Q212.7 252 210.7 257.5Q208.6 263 206.6 272Q204.6 281 204.6 291.5Q204.7 302 206.7 312Q208.6 322 210.1 326Q211.6 330 214.2 335Q216.7 340 219.2 343.5Q221.7 347 224.9 350.4Q228 353.8 234 358.6Q240 363.3 245 366.3Q250 369.2 254.5 371.3Q259 373.4 264 375.3Q269 377.2 276 379.3Q283 381.3 294 383.4Q305 385.4 320 386.4L335 387.4 336.6 385.7Q338.2 384 344.2 375.5Q350.2 367 378.9 325Q407.6 283 422.7 263Q437.8 243 446.3 232.5Q454.8 222 464.4 211Q473.9 200 484.4 189Q494.9 178 503 170.4Q511 162.7 518.5 156.1Q526 149.6 537 141.2Q548 132.8 556.5 127.3Q565 121.7 575 116.3Q585 110.9 595.5 106.4Q606 101.8 615.5 98.8Q625 95.7 634 93.7Q643 91.6 653.8 90.3ZM85.9 524.4Q95.7 524 101.4 523.9Q107 523.8 115 524.3Q123 524.7 131.5 525.7Q140 526.6 153.5 529.2Q167 531.7 177.1 534.4L187.1 537 182.6 539.2Q178 541.3 169 544.3Q160 547.2 149.5 549.2Q139 551.2 133.5 551.8Q128 552.4 115.5 553.1Q103 553.7 93.5 553.6Q84 553.4 79 552.9Q74 552.4 66 550.5Q58 548.5 53.5 546.5Q49 544.4 45.1 541.7Q41.1 539 40.6 538L40.1 537 40.4 536Q40.6 535 42.3 533.4Q44 531.8 45 531.3Q46 530.8 53 528.8Q60 526.8 68 525.8Q76 524.8 85.9 524.4ZM657.2 104.9Q663.4 104 667.7 103.7Q672 103.4 678 103.6Q684 103.7 686 104.2Q688 104.6 690.5 105.7Q693 106.8 696.5 109.3Q700 111.8 702.7 114.9Q705.3 118 706.8 121.5Q708.4 125 708.8 128.5Q709.1 132 708.8 137Q708.4 142 706.3 150.5Q704.3 159 702.3 164Q700.3 169 696.3 177Q692.2 185 683.8 197.5Q675.3 210 667.3 219.5Q659.4 229 653.3 235.5Q647.1 242 633.6 254.6Q620 267.1 607.5 277.2Q595 287.3 581 297.3Q567 307.2 550 317.8Q533 328.3 518 336.3Q503 344.2 490 350.2Q477 356.2 467 360.3Q457 364.3 443.5 368.8Q430 373.3 414 377.4L398 381.4 397.8 381.2L397.6 381 398.2 380Q398.7 379 406.5 368Q414.4 357 425.5 340.5Q436.5 324 454.6 295Q472.7 266 482.3 251.5Q491.8 237 502.8 222Q513.8 207 526.4 192.3Q539 177.6 547.5 169.1Q556 160.5 562 155.1Q568 149.7 575.5 143.6Q583 137.6 591 132.2Q599 126.8 608.5 121.7Q618 116.6 624 114.2Q630 111.7 640.5 108.7Q651 105.7 657.2 104.9ZM1189.5 223L1328.5 24 1329.8 23.6Q1331 23.2 1338.5 23.8Q1346 24.4 1354.5 24.5Q1363 24.5 1370.5 23.9Q1378 23.3 1379 23.5L1380 23.7 1380.7 24.9L1381.3 26 1380.9 27.5Q1380.4 29 1253.5 205Q1126.6 381 1092.1 429.5Q1057.6 478 1047.8 492.5Q1037.9 507 1031.4 517.5Q1024.8 528 1022.7 532.5Q1020.5 537 1019.7 541Q1018.9 545 1019.3 546.5Q1019.7 548 1020.6 549Q1021.5 550 1022.8 550.7Q1024 551.4 1026 551.8Q1028 552.3 1031.5 552.4Q1035 552.5 1039 552Q1043 551.4 1049 549.9Q1055 548.4 1060 546.4Q1065 544.4 1072.5 540.4Q1080 536.4 1088 531.3Q1096 526.1 1101.5 522.1Q1107 518.1 1120.5 506.8Q1134 495.4 1142.5 487.4Q1151 479.3 1160.5 469.5Q1170 459.6 1171.1 458.3Q1172.2 457 1176.5 449.5Q1180.7 442 1184.7 436.5Q1188.6 431 1196.2 422Q1203.8 413 1211.3 405Q1218.8 397 1231.4 385.5Q1244 373.9 1250 369.3Q1256 364.6 1262 360.6Q1268 356.6 1275.5 352.6Q1283 348.6 1287.5 346.7Q1292 344.7 1303.5 340.7Q1315 336.7 1326.5 334.2Q1338 331.6 1343 331.1Q1348 330.5 1355.5 330.4Q1363 330.2 1367 330.5Q1371 330.7 1375.5 331.7Q1380 332.6 1385 334.8Q1390 336.9 1393 339Q1396 341 1398.8 344Q1401.5 347 1403 350Q1404.5 353 1405.3 359.6L1406 366.1 1416.8 352.6Q1427.6 339 1428.8 338Q1430 336.9 1430.5 336.8Q1431 336.6 1434.5 337.5Q1438 338.4 1442.5 338.9Q1447 339.4 1455 339.4Q1463 339.3 1470 338.8Q1477 338.3 1478 338.8L1479 339.2 1479.6 340.6L1480.2 342 1479.8 343Q1479.3 344 1423.6 411Q1367.9 478 1357.9 490.5Q1347.8 503 1341.3 512.5Q1334.8 522 1332.2 527Q1329.6 532 1328.3 535.5Q1326.9 539 1326.5 541.5Q1326 544 1326.3 546.5Q1326.5 549 1327.3 550.1Q1328 551.1 1329.5 551.7Q1331 552.3 1334 552.3Q1337 552.3 1341 551.8Q1345 551.3 1350 549.9Q1355 548.5 1362 545.4Q1369 542.3 1378 536.7Q1387 531.1 1397 523.2Q1407 515.3 1419.3 503.7Q1431.5 492 1444.4 478Q1457.2 464 1474.1 444.2Q1491 424.3 1492 423.9L1493 423.5 1494.5 424.1Q1496 424.7 1499.1 427.4Q1502.1 430 1502.8 431L1503.4 432 1503 433.5Q1502.6 435 1491.4 448Q1480.3 461 1461.7 481.4Q1443 501.8 1435.7 508.9Q1428.4 516 1419.7 523.6Q1411 531.2 1400 539.3Q1389 547.4 1385 549.8Q1381 552.3 1373 556.5Q1365 560.6 1360 562.6Q1355 564.5 1349.5 565.9Q1344 567.3 1339.5 568Q1335 568.6 1326.5 568.6Q1318 568.5 1314.5 567.9Q1311 567.3 1308 566.3Q1305 565.4 1302 563.7Q1299 562 1296.9 560Q1294.8 558 1293.2 555Q1291.6 552 1291.2 550Q1290.7 548 1290.7 544Q1290.7 540 1291.7 535.5Q1292.6 531 1293.7 528Q1294.7 525 1298 519L1301.3 513 1301.2 512.8L1301 512.5 1293 519.8Q1285 527.1 1276.5 533.8Q1268 540.4 1258.5 546.3Q1249 552.3 1241 556.3Q1233 560.4 1228 562.5Q1223 564.5 1215 566.5Q1207 568.5 1200 568.5Q1193 568.5 1189.5 567.9Q1186 567.3 1182 565.9Q1178 564.5 1174 562Q1170 559.4 1166.8 555.7Q1163.6 552 1161.5 548Q1159.4 544 1158.1 539Q1156.7 534 1156.1 529Q1155.5 524 1156.1 514.5Q1156.7 505 1157.6 500Q1158.5 495 1158.3 494.4L1158 493.8 1148.5 502.5Q1139 511.2 1127.5 520.7Q1116 530.2 1108 535.9Q1100 541.5 1092 546.4Q1084 551.2 1076 555.3Q1068 559.3 1059.5 562.3Q1051 565.4 1043 567Q1035 568.5 1026.5 568.4Q1018 568.3 1013 566.8Q1008 565.3 1004 562.8Q1000 560.2 996.8 556.6Q993.6 553 992.6 551Q991.5 549 990.6 546Q989.7 543 989.8 536Q989.8 529 990.8 524Q991.7 519 994.2 512.5Q996.7 506 1001.1 498L1005.4 490 1005.2 489.8L1005 489.5 995.5 496.5Q986 503.4 981.5 505.9Q977 508.4 972 510.3Q967 512.2 963 512.9Q959 513.6 953.5 513.5Q948 513.3 944.5 512.4Q941 511.5 939 510.5Q937 509.4 935 507.8L933 506.2 924 514.9Q915 523.5 911 527Q907 530.4 900.5 535.3Q894 540.2 887 544.7Q880 549.2 873.5 552.8Q867 556.4 858.5 559.8Q850 563.3 844.5 564.8Q839 566.3 833 567.3Q827 568.3 816.5 568.4Q806 568.5 801.5 567.9Q797 567.3 793.5 566.3Q790 565.4 787 564.3Q784 563.2 780.5 561.3Q777 559.4 772.9 555.7Q768.7 552 766.7 549.5Q764.7 547 762.6 543.5Q760.5 540 759.1 536.5Q757.6 533 756.6 528.5Q755.6 524 755.6 515.5Q755.6 507 756.1 503Q756.6 499 757.5 495Q758.4 491 758.2 490.3L758 489.6 746.5 500.5Q735 511.4 727 518Q719 524.5 711.5 530Q704 535.4 697.5 539.4Q691 543.4 683.5 547.4Q676 551.4 667 555.4Q658 559.4 650.5 561.9Q643 564.4 633.5 566.4Q624 568.4 613.5 569.3Q603 570.2 597.5 570.1Q592 570 585 569.3Q578 568.5 571.5 566.5Q565 564.4 560.5 561.8Q556 559.3 553.5 557.2Q550.9 555 547.3 550.5Q543.7 546 540.8 540.5Q537.8 535 535.7 528Q533.6 521 533 514.5Q532.3 508 532.5 502.5Q532.6 497 533.1 493Q533.6 489 535.7 480.5Q537.7 472 542.3 460Q546.8 448 550.2 441.5Q553.6 435 558.7 428Q563.7 421 571.8 411.5Q579.8 402 586.9 394.9Q594 387.7 603 380.2Q612 372.6 621.5 366.1Q631 359.6 640.5 354.2Q650 348.7 659 344.8Q668 340.8 678 337.7Q688 334.5 698 332.6Q708 330.6 715.5 330.4Q723 330.2 730 330.9Q737 331.6 740.5 332.7Q744 333.8 747.5 335.9Q750.9 338 753.7 341Q756.4 344 757.5 346Q758.6 348 759.3 350.5Q760 353 760.1 357Q760.2 361 759.4 364.5Q758.5 368 756.9 371.5Q755.2 375 752.3 379.5Q749.3 384 746.7 387.1Q744 390.2 738 395.8Q732 401.4 724.5 406.9Q717 412.3 707 418.3Q697 424.3 687.5 429.3Q678 434.3 664.5 440.3Q651 446.3 637 451.8Q623 457.3 605.5 463.5L588 469.6 584.4 475.8Q580.7 482 577.7 488.5Q574.7 495 572.7 502Q570.7 509 570.1 513Q569.5 517 569.6 523Q569.6 529 570.2 531.5Q570.8 534 572.9 537.9Q575 541.7 576.7 543.4Q578.3 545 580.7 546.8Q583 548.5 587.5 550.5Q592 552.4 596 552.9Q600 553.4 610 552.9Q620 552.4 628.5 550.9Q637 549.4 641 548.3Q645 547.2 654 543.8Q663 540.4 671 536.4Q679 532.4 686.5 527.9Q694 523.4 700.5 518.8Q707 514.3 715 507.8Q723 501.3 728.5 496.4Q734 491.5 742.3 483.3Q750.5 475 763.3 460.5Q776.1 446 779.4 440Q782.7 434 785.7 429.5Q788.6 425 795.2 416.5Q801.8 408 809.6 399.5Q817.4 391 826.7 382.4Q836 373.8 842.5 368.8Q849 363.7 854 360.3Q859 356.9 865 353.3Q871 349.7 877 346.6Q883 343.5 891.5 340.1Q900 336.6 910 334.1Q920 331.6 924 331.1Q928 330.6 935.5 330.4Q943 330.2 947 330.5Q951 330.7 955.5 331.7Q960 332.7 964.5 334.7Q969 336.6 972 338.6Q975 340.5 978.7 344.3Q982.3 348 984.3 351.5Q986.2 355 987.8 360.5Q989.4 366 989.8 374Q990.2 382 989.3 391.5Q988.4 401 986.4 409.5Q984.3 418 980.9 427.5Q977.4 437 972.9 446.5Q968.3 456 962.3 466Q956.2 476 950.4 484L944.6 492 945.3 493.1Q946 494.1 947.5 495.2Q949 496.3 950.5 496.7Q952 497.1 955.5 497.2Q959 497.3 964.5 495.8Q970 494.3 976 490.9Q982 487.5 987.5 483.5Q993 479.5 999.7 473.8Q1006.4 468 1014.7 459.8Q1023 451.6 1036.7 436.8Q1050.4 422 1189.5 223ZM703.8 347.5Q708.6 346 712.8 345.7Q717 345.3 720 345.6Q723 345.9 725.4 347.5Q727.7 349 729 351.5Q730.3 354 730.7 357.5Q731 361 730.1 365.5Q729.2 370 726.3 375Q723.3 380 719.7 384Q716 388 710.5 392.7Q705 397.4 701.5 399.9Q698 402.3 684.5 410.3Q671 418.3 654 426.3Q637 434.2 627 438.3Q617 442.4 610.3 444.7L603.6 447 603.7 446.5Q603.7 446 610.2 437.5Q616.6 429 626.8 416.5Q636.9 404 644.4 395.5Q651.9 387 661 377.9Q670 368.8 675.5 364.2Q681 359.6 686 356.3Q691 352.9 695 350.9Q699 348.9 703.8 347.5ZM938.6 351.9Q944.1 350 948.1 349.7Q952 349.3 954.5 349.5Q957 349.7 961 351.7Q965 353.7 966.7 355.4Q968.4 357 970.3 361Q972.2 365 972.8 368Q973.3 371 973.3 380.5Q973.3 390 971.4 399.5Q969.4 409 967.4 415Q965.4 421 962.8 427Q960.2 433 959.6 433.7Q959 434.4 955.5 436.1Q952 437.8 949.5 439.7Q947 441.5 944 444.3Q941 447.1 937.4 451.6Q933.7 456 931.8 460Q929.8 464 928.8 467.5Q927.7 471 926.9 478.5L926.1 486 918.1 494.7Q910 503.3 901 511.4Q892 519.4 884 525.3Q876 531.2 869.5 535.2Q863 539.2 853 543.8Q843 548.4 837 549.8Q831 551.3 824.5 551.3Q818 551.3 814.5 549.9Q811 548.5 809.5 547.3Q807.9 546 806.8 544.5Q805.6 543 804.3 540.5Q802.9 538 801.8 535Q800.7 532 800.3 528Q799.9 524 800.3 518.5Q800.6 513 802.2 507Q803.7 501 806.7 494Q809.6 487 811.8 483Q813.9 479 819.3 470.5Q824.6 462 833.1 450.5Q841.6 439 851.3 427.5Q860.9 416 867.7 408.5Q874.5 401 884.8 390.9Q895 380.7 901.5 375.2Q908 369.7 915 364.8Q922 359.8 927.5 356.8Q933 353.8 938.6 351.9ZM1358 349.8Q1364 348 1368 347.8Q1372 347.5 1374.5 348.1Q1377 348.6 1380 350.1Q1383 351.6 1384 352.5Q1385 353.3 1386.2 354.7Q1387.4 356 1388 357.5Q1388.5 359 1388.9 362Q1389.2 365 1388.8 368.5Q1388.4 372 1385.9 379Q1383.3 386 1380.8 391Q1378.2 396 1374.3 402.5Q1370.3 409 1356.3 426Q1342.3 443 1332.3 454.5Q1322.3 466 1308.9 480Q1295.6 494 1286.3 502.7Q1277 511.4 1267 519.4Q1257 527.4 1246 534.3Q1235 541.2 1227 544.9Q1219 548.5 1214 549.8Q1209 551.1 1207 551.3Q1205 551.5 1201.5 551.5Q1198 551.4 1196 550.3Q1194 549.3 1192.8 547.7Q1191.6 546 1191.2 544.5Q1190.8 543 1190.7 538Q1190.6 533 1191.7 527Q1192.7 521 1194.2 516.5Q1195.6 512 1197.5 507.5Q1199.4 503 1202.1 497.5Q1204.8 492 1210.3 483Q1215.8 474 1221.3 466.5Q1226.7 459 1233.6 450.5Q1240.5 442 1247.2 434.5Q1253.8 427 1262.9 417.6Q1272 408.2 1279.6 401.1Q1287.1 394 1295.1 387.4Q1303 380.8 1311 375.3Q1319 369.7 1330 363.2Q1341 356.7 1346.5 354.2Q1352 351.6 1358 349.8Z"/>
+    <g id="lg-rules"><path class="lg-r" d="M155.3 685 157 684.3 285 684.2 286.5 685 286.6 687 286 688.4 283 688.5 157 688.5 155.4 688Z"/><path class="lg-r" d="M1240.5 685 1242 684.2 1371 684.3 1371.7 685 1371.7 687 1371 688.4 1369 688.5 1242 688.5 1240.6 688Z"/></g>
+    <g id="lg-caps"><path class="lg-c" fill-rule="evenodd" d="M334.6 661 336 660.2 351 660.4 363.9 695 365 695.7 377 660.5 393 660.3 393.6 662 393 663.7 390 663.9 388.8 665 388.8 705 389 707.1 393.4 708 393.2 711 373.7 711 374 707.5 378 707.4 378.7 706 378.7 673 378 669.9 364.4 710 363 711.8 361 711.8 360 711.7 358.5 709 346.4 675 344 670 343.8 707 348 707.6 348.5 710 348 711.1 347 711.3 335.5 711 335.4 708 339 707.4 339.6 706 339.6 665 339 663.9 335 663.5Z"/><path class="lg-c" fill-rule="evenodd" d="M417.9 661 420 660.2 455 660.2 456.6 661 456.6 674 456 675.1 453 674.4 452.4 671 451.1 668 449 665.7 447 664.6 443 663.9 435 663.9 434 665 434.1 682 435 682.8 439 682.4 441.4 680 443 676.5 445.9 677 446.2 680 445.8 693 444 693.4 442.5 693 441.5 690 439 687.5 437 686.7 434.4 687 434 706 435 707.5 443 707.5 448 706.4 452.3 702 454 695.1 456 694.8 457.5 696 457.5 710 457 711.2 418.4 711 418.1 708 419 707.5 423 707.5 423.8 706 423.8 665 423 663.9 419 663.9 417.9 663Z"/><path class="lg-c" fill-rule="evenodd" d="M482.7 661 484 660.2 520 660.1 521.6 661 521.6 674 521 675 520 675.1 518 674.7 516 668.3 514 665.8 512 664.6 508 663.9 500 663.9 499 664.7 498.8 682 500 682.7 504 682.3 506.3 680 507.2 677 510 676.5 510.9 678 510.9 686 510.9 692 510 693.4 507.3 693 506.3 690 504 687.6 501 686.6 499.2 687 498.8 706 498.9 707 500 707.5 508 707.4 513 706.2 515.7 704 517 702 519 695 521 694.7 522.4 696 522.4 710 521.8 711 484 711.4 483 710.8 483 707.9 488.5 707 488.6 665 488 663.9 483 663.5Z"/><path class="lg-c" fill-rule="evenodd" d="M561.4 660 564 659.4 569 659.6 576 662.6 580 659.4 582.5 660 582.6 674 582 675.2 579 674.8 577 670.1 575 667.3 572 664.8 569 663.6 564 663.5 561 664.6 558.8 667 558.5 670 558.7 672 562 675.5 575 681.8 579 684.5 582.2 688 584.3 693 584.3 700 583.5 703 580.7 707 578 709.4 574 711.4 566 712.2 562 711.4 556 708.4 553 711.4 550 711.8 549.4 711 549.3 709 549.3 697 550 695.6 552 695.6 553 696.3 555.7 702 560 706.4 565 708.2 569 708.2 573 707.1 576.3 704 576.7 702 577 700 576.3 697 574.6 695 571 692.5 557 685.5 554 682.7 551.7 679 550.6 673 552 667 553.3 665 557 661.7Z"/><path class="lg-c" fill-rule="evenodd" d="M608.5 661 610 660.2 651 660.2 652.8 661 652.8 676 652 677.2 650 677.1 649.1 676 648.3 670 646 665.9 644 664.5 640 663.8 636 664.1 635.6 665 635.7 707 643 708 643.2 710 642.6 711 618.6 711 618.4 709 619 707.5 625 707.5 625.5 707 625.6 665 625 663.9 620 664 617 664.8 614.6 667 613.6 669 612.5 676 611 677.2 609.3 677 608.5 676Z"/><path class="lg-c" fill-rule="evenodd" d="M677.4 661 678 660.3 682 660.2 715 660.2 716.3 661 716.3 674 715 675.1 713 675 710.4 668 707 664.9 703 664 696 663.9 694 664.1 693.5 665 693.5 682 694 682.7 698.8 682 700.1 681 702 676.6 705 676.5 705.5 679 705.5 692 705 693.4 702 693.2 700.3 689 699 687.8 697 686.8 693.7 687 693.6 707 703 707.4 707 706.5 709 705.3 711 702.9 712.4 700 713 695.7 714 694.7 716 694.8 716.6 696 716.6 710 716 711.3 677.7 711 677.4 709 678 707.5 683.3 707 683.4 665 682.3 664 678 663.8 677.4 663Z"/><path class="lg-c" fill-rule="evenodd" d="M748.4 661 750 660.2 773 660.2 773.6 661 773 663.9 768 663.9 767.3 665 767.3 698 766.3 702 764.2 706 761 710.1 758 712.1 754 713.3 750 713.1 746 711.5 742.6 708 741.6 705 741.8 703 743.5 700 745 698.7 748 698.4 750 698.7 751.7 700 753.4 703 753.1 706 751 709.2 754 709.1 755.5 708 756.4 706 757.3 696 757.2 665 756 663.8 749 663.8Z"/><path class="lg-c" fill-rule="evenodd" d="M797.9 661 799 660.2 803 660.2 819 660.2 820.6 661 820.6 663 820 663.8 815 663.9 814.1 665 814.1 696 814.7 702 816.5 705 820 707.4 824 707.8 828 707.5 832.3 705 834.2 702 835.2 696 835.2 665 834 664 830 663.8 829.3 663 829.3 661 830 660.2 843 660.2 844.8 661 844.8 663 844 663.9 840 663.9 838.8 665 838.5 701 836.3 706 833 709.4 829 711.3 820 712.3 812 710.5 807 706.7 804.6 702 803.8 696 803.8 665 803 663.9 799 663.9 798 663.2Z"/><path class="lg-c" fill-rule="evenodd" d="M869.3 661 870 660.2 890 660.2 891.9 661 891.9 663 891 663.8 886.1 664 885.4 665 885.6 699 886.5 703 888 705.4 891 707.3 895 707.8 899 707.5 902 706.4 904.4 704 906.1 700 906.4 665 905 663.9 901 663.7 900.6 661 902 660.2 915 660.2 916.4 661 916 663.5 911 664 910.3 665 910.2 698 908.3 705 906 707.9 903 710.2 900 711.5 895 712.2 886 711.5 881 709.3 877.7 706 875.5 700 875.4 665 875 664 870 663.8 869.3 663Z"/><path class="lg-c" fill-rule="evenodd" d="M940.7 661 942 660.2 963 660.2 963.5 661 963 663.7 958 663.9 956.9 665 957 684.4 958.2 684 973.4 665 973 663.9 970 663.9 969 663.2 969 660.8 971 660.2 986 660.5 986 663.5 980 663.9 979 664.7 966.6 680 966.7 681 982 706.7 983 707.5 989 707.7 989.5 710 989 711.1 966 711.3 965.5 709 966 707.5 970.1 707 960 688.9 957.7 691 956.9 693 957 707 963 707.9 962.9 711 942 711.4 941 710.8 941 707.9 946.7 707 946.8 665 946 663.9 941 663.4Z"/><path class="lg-c" fill-rule="evenodd" d="M1026.7 660 1034 659.6 1038 660.7 1041 662.5 1042 662.5 1045 659.5 1047 659.5 1048.1 661 1048.1 673 1047 675.3 1044.7 675 1041 668 1039 665.9 1035 663.8 1030 663.5 1026 664.9 1024.8 666 1023.7 669 1024.6 673 1026 674.5 1030 677.1 1042 682.7 1047 687.4 1049.4 692 1049.5 701 1048.3 704 1045 708.2 1042 710.4 1039 711.5 1035 712.3 1030 712 1025 710.5 1022 708.5 1021 708.5 1018 711.6 1016 711.8 1014.6 711 1014.6 697 1014.9 696 1016 695.6 1018.3 696 1021.7 703 1024 705.3 1027 707.2 1030 708.1 1035 708.2 1038 707.4 1041 704.9 1042.4 702 1042.1 698 1040 694.9 1037 692.8 1022 685.3 1018.7 682 1016.7 678 1016.3 671 1018 666 1022 661.9Z"/><path class="lg-c" fill-rule="evenodd" d="M1073.2 661 1075 660.2 1091 660.2 1095 660.2 1095.7 661 1095.7 663 1095 663.9 1090 663.9 1089.3 665 1089.5 700 1090.7 704 1093 706.4 1095 707.4 1099 707.8 1103 707.5 1106 706.3 1108.7 703 1110.2 698 1110.3 665 1109 663.9 1105 663.8 1104.5 661 1106 660.2 1119 660.2 1120 661 1120 663 1119 663.8 1115 663.9 1114.2 665 1114.1 697 1112.5 704 1111.5 706 1108 709.5 1103 711.6 1094 712.1 1087 710.5 1084 708.6 1081.5 706 1079.8 702 1079.1 696 1079.2 665 1078 664 1074 663.9 1073.2 663Z"/><path class="lg-c" fill-rule="evenodd" d="M1144.6 661 1146 660.2 1174 660.5 1178 661.6 1183.3 665 1186.2 670 1186.3 677 1184.4 681 1177.9 686 1182 688.8 1184.4 693 1185.6 706 1187 707.4 1191 706.8 1192.1 709 1192 710.3 1189 711.4 1183 711.6 1181 711.4 1178.2 710 1175.4 706 1174.2 693 1173 690.1 1172 688.8 1169 687.6 1163 687.5 1161.7 688 1161.7 707 1168 707.5 1168.6 709 1168.3 711 1144.9 711 1145 707.7 1151.4 707 1151.5 665 1151 663.9 1145 663.6ZM1162.7 664 1168 663.9 1172 664.7 1175.2 668 1176.3 673 1175.3 679 1173 682.1 1171 683.1 1164 683.6 1161.7 683 1161.6 665Z"/></g>
+    <g id="lg-city"><path class="lg-v" fill-rule="evenodd" d="M581.7 766 584 765.5 596.6 766 596.6 768 593.2 769 600 789.8 607.4 770 607 768.5 603.6 768 603.6 766 606 765.6 614.4 766 614 768.3 610.5 769 600.4 798 599 799.4 596 799 585.5 769 582 768.3Z"/><path class="lg-v" fill-rule="evenodd" d="M637 766 652 765.6 653 766 653 768.1 648.3 769 648.3 781 648.3 795 649 795.8 652.4 796 653.3 797 653 798.2 638 798.6 636.8 798 636.7 797 637.6 796 641 795.8 641.5 795 641.5 769 637 768.2Z"/><path class="lg-v" fill-rule="evenodd" d="M675.6 766 688 765.6 689.5 766 689.5 768 685.9 769 685.9 795 687 795.8 695 795.3 697.1 793 697.9 789 699 787.9 700 787.8 700.6 789 700.6 796 700.6 798 700 798.6 676 798.5 675.5 798 676 795.9 678 795.8 679.3 795 679.3 769 676 768.4Z"/><path class="lg-v" fill-rule="evenodd" d="M727.6 766 743 765.6 743.8 767 743 768.5 740 768.5 739.5 769 739.3 792 737.3 796 735.4 798 733 799.5 731 799.8 726.1 799 724 797 723.2 795 723.6 792 725 790.5 727 790.3 729 790.6 730.3 792 730.6 794 730.1 796 731 796.9 732.3 796 732.4 795 732.8 769 728 768.4Z"/><path class="lg-v" fill-rule="evenodd" d="M782.8 765 784 765.3 785.4 768 794.6 795 796 795.8 798 795.8 798.6 798 797 798.6 784 798.2 784 796.5 787.1 795 785 789.4 776 789.2 774.8 790 773.3 795 774 795.8 776 796.1 776.4 798 775 798.6 767 798.5 766.1 798 765.9 797 766.8 796 770.4 795 780.5 766 781 765.3ZM779.8 776 780 775.6 781 776.3 782.4 780 784.1 786 783 786.4 776.5 786Z"/><path class="lg-v" fill-rule="evenodd" d="M821.2 766 833 765.6 846 785.8 846.4 769 842 768 842 766.2 843 765.6 853.4 766 853 768.4 849.3 769 849.3 797 848.6 799 847 799.2 845.4 798 829 771.5 828.3 772 828.2 774 828.2 795 829 795.8 832.3 796 833 798 832 798.5 823 798.6 820.9 798 820.9 797 821.8 796 825 795.5 825.4 794 825.3 769 821.2 768Z"/><path class="lg-v" fill-rule="evenodd" d="M876 766 891 765.6 896 766.6 902 771.1 904.5 775 905.6 780 905.6 784 904.5 789 902.1 793 900 795.1 893 798.4 877 798.6 875.7 798 876 796.5 879 795.8 879.6 794 879.6 769 876 768ZM886.5 769 887 768.5 891 768.5 894 769.8 896.5 773 897.5 776 898.2 784 897.4 789 896.3 792 893 795.3 887 795.8 886.5 795Z"/><path class="lg-v" fill-rule="evenodd" d="M929.1 766 932 765.5 945.2 766 945 768.3 941 768.5 940.5 769 940.4 795 941 795.8 945 796.1 945.5 797 945 798.5 930 798.5 928.9 798 928.8 797 929.8 796 933 795.8 933.6 794 933.5 769 929 768Z"/></g>
+  </defs>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.2l1.6 4.2-2 1.4a12 12 0 0 0 6.6 6.6l1.4-2 4.2 1.6V19a1.8 1.8 0 0 1-1.8 1.8C10.6 20.8 3.2 13.4 3.2 5.8A1.8 1.8 0 0 1 5 4Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="b-apple" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol>
+  <symbol id="b-google" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></symbol>
+  <symbol id="b-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+</svg>
+
+<header class="nav on-dark" data-nav>
+  <a class="nav__brand" href="#avaleht" aria-label="Leola Meestejuuksur, lehe algusesse"><svg viewBox="14 14 1500 572" aria-hidden="true"><use href="#lg-script"/></svg></a>
+  <div class="nav__side">
+    <nav class="nav__links" aria-label="Lehe osad">
+      <a href="#hinnakiri">Hinnakiri</a>
+      <a href="#stuudio">Stuudio</a>
+      <a href="#arvustused">Arvustused</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="nav__tel" href="tel:+3724333242">433&nbsp;3242</a>
+    <a class="btn btn--main" href="#broneeri">Broneeri aeg</a>
+  </div>
+</header>
+
+<div id="smooth-wrapper"><div id="smooth-content">
+<main id="sisu">
+
+  <section class="hero on-dark" id="avaleht">
+    <div class="hero__media" aria-hidden="true">
+      <!-- Kolm kaadrit Leola enda stuudiost ja nende peal film samadest kaadritest (hero-lai.mp4 laiale, hero-pusti.mp4 püstisele ekraanile).
+           Filmi kolm klippi on tehtud Leola enda fotodest Higgsfieldi abil (aeglane kaameraliikumine); kaadrid jäävad pildiks seni, kuni film mängima hakkab. -->
+      <picture><source media="(orientation: portrait)" srcset="hero-1-pusti.jpg"><img class="hero__still hero__still--1" alt="" decoding="async" fetchpriority="high" src="hero-1-lai.jpg"></picture>
+      <picture><source media="(orientation: portrait)" srcset="hero-2-pusti.jpg"><img class="hero__still hero__still--2" alt="" decoding="async" loading="lazy" src="hero-2-lai.jpg"></picture>
+      <picture><source media="(orientation: portrait)" srcset="hero-3-pusti.jpg"><img class="hero__still hero__still--3" alt="" decoding="async" loading="lazy" src="hero-3-lai.jpg"></picture>
+      <video class="hero__film" data-film data-wide="hero-lai.mp4" data-tall="hero-pusti.mp4" muted loop playsinline preload="none" tabindex="-1"></video>
+      <div class="hero__shade"></div>
+    </div>
+    <div class="hero__inner wrap">
+      <h1 class="hero__title"><span class="sr-only">Leola Meestejuuksur Viljandi</span>
+        <svg class="logo" viewBox="0 0 1527 823" aria-hidden="true" focusable="false"><use href="#lg-script"/><use href="#lg-rules"/><use href="#lg-caps"/><use href="#lg-city"/></svg>
+      </h1>
+      <p class="hero__lead">Soodsate hindadega meestejuuksur Viljandi kesklinnas. Broneeri aeg või tule elavas järjekorras. Aastast&nbsp;1996.</p>
+      <div class="hero__actions">
+        <a class="btn btn--main" href="#broneeri">Broneeri aeg</a>
+        <a class="btn btn--line" href="tel:+3724333242"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Helista 433&nbsp;3242</a>
+      </div>
+    </div>
+    <div class="hero__shelf wrap">
+      <ul class="stack">
+        <li><a class="block" href="#hinnakiri"><span class="fact"><span>Lõikus alates</span> <b><span data-min-price>5</span>&nbsp;<span class="eur">€</span></b></span><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a class="block" href="#kontakt" data-state-block><span class="fact"><span data-state-label></span> <b data-state-value>Lahtiolekuajad</b></span><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a class="block" href="#asukoht"><span class="fact"><span>C. R. Jakobsoni 11</span> <b>2. korrus</b></span><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+      <div class="shelf"></div>
+    </div>
+  </section>
+
+  <section class="story" id="lugu" aria-labelledby="lugu-h">
+    <div class="wrap story__grid">
+      <div class="story__text">
+        <h2 class="d1 d1--xl" id="lugu-h">Tegutseme Viljandis aastast 1996.</h2>
+        <p class="lead">Leola on kesklinna meestejuuksur, kuhu võib tulla ka aega kinni panemata. Hinnad on soodsad.</p>
+        <div data-stack>
+          <ul class="stack">
+            <li class="block"><span class="fact"><b>1996</b><span>sellest aastast avatud</span></span></li>
+            <li class="block"><span class="fact"><b>30</b><span>aastat kogemust</span></span></li>
+            <li class="block"><span class="fact"><b>100&nbsp;000+</b><span>lõikust tehtud</span></span></li>
+          </ul>
+          <div class="shelf"></div>
+        </div>
+      </div>
+      <figure class="standing" data-settle>
+        <div class="frame"><img alt="Leola stuudio: lõikuskohad, seinakell ja ooteala diivanid" loading="lazy" decoding="async" width="1200" height="1600" src="foto-stuudio.jpg" srcset="foto-stuudio-720.jpg 720w, foto-stuudio.jpg 1200w" sizes="(min-width: 56em) 34rem, 92vw"></div>
+        <div class="shelf"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="prices" id="hinnakiri" aria-labelledby="hinnakiri-h">
+    <div class="wrap split">
+      <header class="split__head">
+        <h2 class="d1" id="hinnakiri-h">Hinnakiri</h2>
+        <p class="lead">Vali teenus ja pane aeg kinni. Või astu lihtsalt läbi.</p>
+      </header>
+      <div data-stack>
+        <!-- Hinnakiri salongi seinalt. Broneerimisvorm loeb teenused ja hinnad siit samast nimekirjast. -->
+        <ul class="stack" data-services>
+          <li><a class="block svc" href="#broneeri" data-book data-id="juukseloikus" data-cut data-from="17"><span class="svc__name">Juukselõikus</span><span class="svc__side"><span class="svc__go">Broneeri<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span><span class="svc__price">17–20&nbsp;<span class="eur">€</span></span><svg class="i svc__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="block svc" href="#broneeri" data-book data-id="masinaloikus" data-cut data-from="5"><span class="svc__name">Masinalõikus</span><span class="svc__side"><span class="svc__go">Broneeri<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span><span class="svc__price">5–15&nbsp;<span class="eur">€</span></span><svg class="i svc__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="block svc" href="#broneeri" data-book data-id="habe"><span class="svc__name">Habeme piiramine</span><span class="svc__side"><span class="svc__go">Broneeri<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span><span class="svc__price">5–10&nbsp;<span class="eur">€</span></span><svg class="i svc__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="block svc" href="#broneeri" data-book data-id="pesu"><span class="svc__name">Juuksepesu</span><span class="svc__side"><span class="svc__go">Broneeri<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span><span class="svc__price">4&nbsp;<span class="eur">€</span></span><svg class="i svc__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        </ul>
+        <div class="shelf"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="broneeri" aria-labelledby="broneeri-h">
+    <div class="wrap split">
+      <header class="split__head">
+        <h2 class="d1" id="broneeri-h">Broneeri aeg</h2>
+        <p class="lead">Vali teenus, juuksur ja sobiv aeg. Kinnitame aja telefoni teel.</p>
+      </header>
+      <form class="booking" data-booking novalidate>
+        <div class="booking__form" data-form>
+          <fieldset>
+            <legend>Teenus</legend>
+            <div class="chips" data-service-opts></div>
+          </fieldset>
+          <fieldset>
+            <legend>Juuksur</legend>
+            <div class="chips">
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-rita" value="Rita"><label for="bk-st-rita">Rita</label></div>
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-maire" value="Maire"><label for="bk-st-maire">Maire</label></div>
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-kaire" value="Kaire"><label for="bk-st-kaire">Kaire</label></div>
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-laine" value="Laine"><label for="bk-st-laine">Laine</label></div>
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-hele" value="Hele"><label for="bk-st-hele">Hele</label></div>
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-reelika" value="Reelika"><label for="bk-st-reelika">Reelika</label></div>
+              <div class="chip"><input type="radio" name="stylist" id="bk-st-any" value="" checked><label for="bk-st-any">Pole vahet</label></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Päev</legend>
+            <div class="chips" data-days></div>
+          </fieldset>
+          <fieldset>
+            <legend>Kellaaeg</legend>
+            <div class="chips chips--times" data-times></div>
+          </fieldset>
+          <div class="fields">
+            <div class="field"><label for="bk-name">Nimi</label><input id="bk-name" name="name" type="text" autocomplete="name" aria-describedby="bk-name-err"><p class="field__err" id="bk-name-err"></p></div>
+            <div class="field"><label for="bk-tel">Telefon</label><input id="bk-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="bk-tel-err"><p class="field__err" id="bk-tel-err"></p></div>
+          </div>
+          <div class="booking__foot">
+            <div><p class="booking__sum" data-sum aria-live="polite"></p><p class="booking__err" data-err role="alert"></p></div>
+            <button class="btn btn--ink" type="submit" data-send>Saada broneering</button>
+          </div>
+        </div>
+        <div class="booking__done" data-done hidden tabindex="-1">
+          <h3 data-done-title>Aitäh!</h3>
+          <p data-done-what></p>
+          <p data-done-next hidden></p>
+          <!-- NÄIDISREŽIIM: kuni BOOKING_ENDPOINT on tühi, ütleb leht ausalt, et broneering ei jõudnud kuhugi. -->
+          <p class="booking__demo" data-done-demo>See on näidisleht: broneering ei jõudnud veel salongi. Aja kinnitamiseks helista <a href="tel:+3724333242">433&nbsp;3242</a>.</p>
+          <button class="btn btn--line" type="button" data-again>Tee uus broneering</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="studio" id="stuudio" aria-labelledby="stuudio-h">
+    <div class="wrap studio__head">
+      <h2 class="d1" id="stuudio-h">Stuudio</h2>
+    </div>
+    <ul class="studio__row" data-settle-row tabindex="0" aria-label="Fotod stuudiost, keritav rida">
+      <li class="frame"><img alt="Stuudio saal: lõikuskohad ja suur seinakell" loading="lazy" decoding="async" width="1200" height="1600" src="foto-saal.jpg" srcset="foto-saal-720.jpg 720w, foto-saal.jpg 1200w" sizes="(min-width: 56em) 18rem, 72vw"></li>
+      <li class="frame"><img alt="Ooteala: mustad diivanid mustrilise seina ääres, seinal kiri Leola Meestejuuksur" loading="lazy" decoding="async" width="1200" height="1600" src="foto-ooteala.jpg" srcset="foto-ooteala-720.jpg 720w, foto-ooteala.jpg 1200w" sizes="(min-width: 56em) 18rem, 72vw"></li>
+      <li class="frame"><img alt="Peeglisein ja lõikustoolid" loading="lazy" decoding="async" width="1200" height="1600" src="foto-peeglid.jpg" srcset="foto-peeglid-720.jpg 720w, foto-peeglid.jpg 1200w" sizes="(min-width: 56em) 18rem, 72vw"></li>
+      <li class="frame"><img alt="Pesunurk akna all" loading="lazy" decoding="async" width="1200" height="1600" src="foto-pesunurk.jpg" srcset="foto-pesunurk-720.jpg 720w, foto-pesunurk.jpg 1200w" sizes="(min-width: 56em) 18rem, 72vw"></li>
+    </ul>
+    <div class="shelf"></div>
+  </section>
+
+  <section class="voices" id="arvustused" aria-labelledby="arvustused-h">
+    <div class="wrap">
+      <div class="voices__head">
+        <h2 class="d1" id="arvustused-h">Mida ütlevad kliendid</h2>
+        <!-- Google'i keskmine hinne ja arvustuste arv: seis 2026-10-11, uuenda käsitsi. -->
+        <p class="rating">
+          <span class="rating__num">4,6</span>
+          <span class="stars" role="img" aria-label="Google’i keskmine hinne 4,6 viiest" style="--fill: 92%"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><span class="stars__on" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span>
+          <a class="link" href="https://www.google.com/maps?cid=16921362443129169266" target="_blank" rel="noopener">46 arvustust Google’is<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (avaneb uues aknas)</span></a>
+        </p>
+      </div>
+      <div data-stack>
+        <ul class="voices__row">
+          <li class="review">
+            <div class="review__who"><span class="review__face" aria-hidden="true">A</span><div><p class="review__name">Alar</p><p class="review__src">Google’i arvustus</p></div></div>
+            <span class="stars" role="img" aria-label="Hinnang: 5 tärni viiest"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote>Parimad meeste juuksurid Viljandis, ka mitu aastat hiljem</blockquote>
+            <a class="link" href="https://share.google/JmxSynHZcH5XaRJpK" target="_blank" rel="noopener">Vaata Google’is<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (avaneb uues aknas)</span></a>
+          </li>
+          <li class="review">
+            <div class="review__who"><span class="review__face" aria-hidden="true">I</span><div><p class="review__name">Indrek</p><p class="review__src">Google’i arvustus</p></div></div>
+            <span class="stars" role="img" aria-label="Hinnang: 5 tärni viiest"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote>Väga head juuksurid, kiidan!</blockquote>
+            <a class="link" href="https://share.google/Tc59bcY8qt5HV2Sa8" target="_blank" rel="noopener">Vaata Google’is<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (avaneb uues aknas)</span></a>
+          </li>
+          <li class="review">
+            <div class="review__who"><span class="review__face" aria-hidden="true">M</span><div><p class="review__name">Meelis</p><p class="review__src">Google’i arvustus</p></div></div>
+            <span class="stars" role="img" aria-label="Hinnang: 5 tärni viiest"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote>Parim juuksur</blockquote>
+            <a class="link" href="https://share.google/nAntPUoHzehP2a2TT" target="_blank" rel="noopener">Vaata Google’is<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (avaneb uues aknas)</span></a>
+          </li>
+        </ul>
+        <div class="shelf"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="floor on-dark">
+    <section class="visit" id="kontakt" aria-labelledby="kontakt-h">
+      <div class="wrap visit__grid">
+        <div class="visit__col">
+          <h2 class="d1" id="kontakt-h">Lahtiolekuajad</h2>
+          <p class="state" data-state-line></p>
+          <dl class="stack hours">
+            <div class="block" data-day="1"><dt>Esmaspäev</dt><dd>8:00–15:00</dd></div>
+            <div class="block" data-day="2"><dt>Teisipäev</dt><dd>8:00–17:00</dd></div>
+            <div class="block" data-day="3"><dt>Kolmapäev</dt><dd>8:00–17:00</dd></div>
+            <div class="block" data-day="4"><dt>Neljapäev</dt><dd>8:00–17:00</dd></div>
+            <div class="block" data-day="5"><dt>Reede</dt><dd>8:00–17:00</dd></div>
+            <div class="block" data-day="6"><dt>Laupäev</dt><dd>8:00–15:00</dd></div>
+            <div class="block is-off" data-day="0"><dt>Pühapäev</dt><dd>Puhkepäev</dd></div>
+          </dl>
+        </div>
+        <div class="visit__col place">
+          <h2 class="d1" id="asukoht">Asukoht</h2>
+          <address>C. R. Jakobsoni 11, 2. korrus<br>71020 Viljandi</address>
+          <a class="place__tel" href="tel:+3724333242"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>433&nbsp;3242</a>
+          <div class="go">
+            <a class="btn btn--main" href="https://maps.apple.com/?q=Leola%20Meestejuuksur&amp;ll=58.367663,25.593948&amp;z=17" target="_blank" rel="noopener"><svg class="mark mark--apple" aria-hidden="true"><use href="#b-apple"/></svg>Ava Apple Mapsis<span class="sr-only"> (avaneb uues aknas)</span></a>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=58.367663,25.593948" target="_blank" rel="noopener"><svg class="mark" aria-hidden="true"><use href="#b-google"/></svg>Google Maps<span class="sr-only"> (avaneb uues aknas)</span></a>
+            <a class="btn btn--line btn--icon" href="https://www.facebook.com/p/Leola-Meestejuuksur-100054724902093/" target="_blank" rel="noopener" aria-label="Leola Meestejuuksur Facebookis (avaneb uues aknas)" title="Leola Facebookis"><svg class="mark" aria-hidden="true"><use href="#b-facebook"/></svg></a>
+          </div>
+          <img class="door" alt="Leola klaasuks teisel korrusel, uksel nimi, lahtiolekuajad ja telefoninumber" loading="lazy" decoding="async" width="900" height="1200" src="foto-uks.jpg">
+        </div>
+        <div class="map" id="kaart">
+          <div class="map__canvas" data-map role="application" aria-label="Kaart: Leola Meestejuuksur, C. R. Jakobsoni 11, 2. korrus, Viljandi"></div>
+          <p class="map__note">Kaart laadib. Kui see ei ilmu, ava asukoht ülalolevast nupust.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer wrap">
+      <svg class="footer__logo" viewBox="0 0 1527 823" role="img" aria-label="Leola Meestejuuksur Viljandi"><use href="#lg-script"/><use href="#lg-rules"/><use href="#lg-caps"/><use href="#lg-city"/></svg>
+      <ul class="footer__facts">
+        <li>C. R. Jakobsoni 11, 2. korrus, 71020 Viljandi</li>
+        <li><a href="tel:+3724333242">433&nbsp;3242</a></li>
+        <li><a href="https://www.facebook.com/p/Leola-Meestejuuksur-100054724902093/" target="_blank" rel="noopener">Facebook<span class="sr-only"> (avaneb uues aknas)</span></a></li>
+      </ul>
+      <p class="footer__legal">Rita Jakovlev FIE</p>
+    </footer>
+  </div>
+
+</main>
+</div></div>
+
+<nav class="dock" data-dock aria-label="Kiirvalikud">
+  <a class="btn btn--line" href="tel:+3724333242"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Helista</a>
+  <a class="btn btn--main" href="#broneeri">Broneeri aeg</a>
+</nav>
+
+<template id="pin">
+  <div class="pin">
+    <svg viewBox="0 0 40 52" aria-hidden="true"><path d="M20 51S37 32.6 37 19.5a17 17 0 1 0-34 0C3 32.6 20 51 20 51Z" fill="#eceef1" stroke="#111214" stroke-width="1.5"/><circle cx="20" cy="19.5" r="6" fill="#111214"/></svg>
+    <span class="pin__label">Leola<small>2. korrusel</small></span>
+  </div>
+</template>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Leola Meestejuuksur",
+  "telephone": "+372 433 3242",
+  "priceRange": "4–20 €",
+  "address": { "@type": "PostalAddress", "streetAddress": "C. R. Jakobsoni tn 11, 2. korrus", "addressLocality": "Viljandi", "postalCode": "71020", "addressRegion": "Viljandi maakond", "addressCountry": "EE" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 58.367663, "longitude": 25.593948 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Saturday"], "opens": "08:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
+  ]
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
+  const root = document.documentElement;
+  const $ = (sel, el = document) => el.querySelector(sel);
+  const $$ = (sel, el = document) => Array.from(el.querySelectorAll(sel));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+
+  /* ------------------------------------------------- opening hours, live */
+  // Pühapäev = 0. Ajad uksel: E ja L 8–15, T–R 8–17.
+  const HOURS = [null, [8, 15], [8, 17], [8, 17], [8, 17], [8, 17], [8, 15]];
+  const DAY = ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev"];
+  const DAY_ON = ["pühapäeval", "esmaspäeval", "teisipäeval", "kolmapäeval", "neljapäeval", "reedel", "laupäeval"];
+  const DAY_KEYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const SLOT = 1; // broneeritava aja samm tundides: aegu saab võtta iga tunni tagant
+  const tallinn = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Tallinn", weekday: "short", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  // The salon keeps Tallinn time whatever clock the visitor's device shows.
+  function tallinnNow() {
+    const p = {};
+    for (const part of tallinn.formatToParts(new Date())) p[part.type] = part.value;
+    return { day: DAY_KEYS.indexOf(p.weekday), h: Number(p.hour), m: Number(p.minute), y: Number(p.year), mo: Number(p.month), d: Number(p.day) };
+  }
+  const hm = (hours) => Math.floor(hours) + ":" + String(Math.round((hours % 1) * 60)).padStart(2, "0");
+  function readState(now) {
+    const t = now.h + now.m / 60;
+    const today = HOURS[now.day];
+    if (today && t >= today[0] && t < today[1]) return { open: true, until: today[1] };
+    if (today && t < today[0]) return { open: false, next: { in: 0, day: now.day, at: today[0] } };
+    for (let i = 1; i <= 7; i++) {
+      const day = (now.day + i) % 7;
+      if (HOURS[day]) return { open: false, next: { in: i, day, at: HOURS[day][0] } };
+    }
+    return { open: false, next: null };
+  }
+  let stateKey = "";
+  function paintState() {
+    const now = tallinnNow();
+    const key = now.day + ":" + now.h + ":" + now.m;
+    if (key === stateKey) return;
+    stateKey = key;
+    const state = readState(now);
+    // The page only ever says something welcoming: open now and until when, or when the door opens next.
+    let line = "";
+    let label = "";
+    let value = "";
+    if (state.open) {
+      line = `Praegu avatud, suleme kell ${hm(state.until)}`;
+      label = "Avatud kuni";
+      value = hm(state.until);
+    } else if (state.next) {
+      const when = state.next.in === 0 ? "täna" : state.next.in === 1 ? "homme" : DAY_ON[state.next.day];
+      line = `Avame ${when} kell ${hm(state.next.at)}`;
+      label = `Avame ${when}`;
+      value = hm(state.next.at);
+    }
+    for (const el of $$("[data-state-line]")) if (el.textContent !== line) el.textContent = line;
+    if (value) {
+      for (const el of $$("[data-state-label]")) if (el.textContent !== label) el.textContent = label;
+      for (const el of $$("[data-state-value]")) if (el.textContent !== value) el.textContent = value;
+    }
+    for (const el of $$("[data-state-block]")) el.classList.toggle("is-live", state.open);
+    for (const row of $$(".hours [data-day]")) row.classList.toggle("is-today", Number(row.dataset.day) === now.day);
+  }
+  paintState();
+  setInterval(paintState, 20000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) paintState(); });
+
+  /* ------------------------------------------------------------- prices */
+  const rows = $$("[data-services] .svc");
+  const services = rows.map((row) => ({ id: row.dataset.id, name: $(".svc__name", row).textContent.trim(), price: $(".svc__price", row).textContent.trim() }));
+  const cuts = rows.filter((row) => row.hasAttribute("data-cut") && row.dataset.from).map((row) => Number(row.dataset.from));
+  if (cuts.length) for (const el of $$("[data-min-price]")) el.textContent = Math.min(...cuts);
+
+  /* ------------------------------------------------------------ booking */
+  // Päris broneeringute vastuvõtja aadress (vormiteenus või oma server, mis võtab vastu JSON POST-i).
+  // Tühi väärtus = näidisrežiim: vorm töötab lõpuni, aga ei saada midagi kuhugi.
+  const BOOKING_ENDPOINT = "";
+  const form = $("[data-booking]");
+  if (form) {
+    const svcBox = $("[data-service-opts]", form);
+    const dayBox = $("[data-days]", form);
+    const timeBox = $("[data-times]", form);
+    const sum = $("[data-sum]", form);
+    const err = $("[data-err]", form);
+    const sendBtn = $("[data-send]", form);
+    const formPane = $("[data-form]", form);
+    const donePane = $("[data-done]", form);
+    const pick = { service: null, day: null, time: null };
+    let days = [];
+
+    function chip(name, value, text, extra) {
+      const wrap = document.createElement("div");
+      wrap.className = "chip";
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = name;
+      input.value = value;
+      input.id = `bk-${name}-${value}`.replace(/[^\w-]/g, "");
+      const label = document.createElement("label");
+      label.htmlFor = input.id;
+      label.append(text);
+      if (extra) { const b = document.createElement("b"); b.textContent = extra; label.appendChild(b); }
+      wrap.append(input, label);
+      return wrap;
+    }
+    services.forEach((s) => svcBox.appendChild(chip("service", s.id, s.name, s.price)));
+
+    // The next six days the door is open, by name (no dates on the page); today only shows times still ahead.
+    function openDays() {
+      const now = tallinnNow();
+      const base = Date.UTC(now.y, now.mo - 1, now.d);
+      const out = [];
+      for (let i = 0; i < 14 && out.length < 6; i++) {
+        const date = new Date(base + i * 86400000);
+        const weekday = date.getUTCDay();
+        const hours = HOURS[weekday];
+        if (!hours) continue;
+        const slots = [];
+        for (let t = hours[0]; t <= hours[1] - SLOT + 1e-9; t += SLOT) {
+          if (i === 0 && t < now.h + now.m / 60 + SLOT) continue;
+          slots.push(t);
+        }
+        if (!slots.length) continue;
+        // a weekday a full week away is named as such, so it is never taken for today
+        const label = i === 0 ? "Täna" : i === 1 ? "Homme" : i >= 7 ? "Järgmine " + DAY[weekday].toLowerCase() : DAY[weekday];
+        const on = i === 0 ? "täna" : i === 1 ? "homme" : i >= 7 ? "järgmisel " + DAY_ON[weekday] : DAY_ON[weekday];
+        out.push({ iso: date.toISOString().slice(0, 10), label, on, slots });
+      }
+      return out;
+    }
+    function paintTimes() {
+      timeBox.replaceChildren();
+      const day = days.find((d) => d.iso === pick.day);
+      if (!day) return;
+      if (!day.slots.includes(pick.time)) pick.time = null;
+      for (const t of day.slots) {
+        const opt = chip("time", String(t), hm(t));
+        if (t === pick.time) $("input", opt).checked = true;
+        timeBox.appendChild(opt);
+      }
+    }
+    function paintDays() {
+      days = openDays();
+      if (!days.some((d) => d.iso === pick.day)) { pick.day = days.length ? days[0].iso : null; pick.time = null; }
+      dayBox.replaceChildren();
+      for (const d of days) {
+        const opt = chip("day", d.iso, d.label);
+        if (d.iso === pick.day) $("input", opt).checked = true;
+        dayBox.appendChild(opt);
+      }
+      paintTimes();
+    }
+    const stylist = () => { const on = $('input[name="stylist"]:checked', form); return on ? on.value : ""; };
+    function summary() {
+      const service = services.find((s) => s.id === pick.service);
+      const day = days.find((d) => d.iso === pick.day);
+      const parts = [];
+      if (service) parts.push(`${service.name}, ${service.price}`);
+      if (stylist()) parts.push(`${stylist()} juurde`);
+      if (day && pick.time !== null) parts.push(`${day.on} kell ${hm(pick.time)}`);
+      sum.textContent = parts.join(" · ");
+    }
+    function chooseService(id) {
+      pick.service = id;
+      const input = $(`input[name="service"][value="${id}"]`, form);
+      if (input) input.checked = true;
+      summary();
+    }
+    form.addEventListener("change", (event) => {
+      const input = event.target;
+      if (input.name === "service") pick.service = input.value;
+      else if (input.name === "day") { pick.day = input.value; paintTimes(); }
+      else if (input.name === "time") pick.time = Number(input.value);
+      err.textContent = "";
+      summary();
+    });
+    function fieldError(input, message) {
+      const out = $("#" + input.getAttribute("aria-describedby"), form);
+      out.textContent = message;
+      if (message) input.setAttribute("aria-invalid", "true"); else input.removeAttribute("aria-invalid");
+      return !message;
+    }
+    function valid() {
+      const name = form.elements.namedItem("name");
+      const tel = form.elements.namedItem("tel");
+      const digits = tel.value.replace(/\D/g, "");
+      const okName = fieldError(name, name.value.trim().length < 2 ? "Kirjuta oma nimi." : "");
+      const okTel = fieldError(tel, digits.length < 7 || digits.length > 15 ? "Kirjuta telefoninumber, millelt sind kätte saame." : "");
+      let message = "";
+      if (!pick.service) message = "Vali teenus.";
+      else if (!pick.day || pick.time === null) message = days.length ? "Vali päev ja kellaaeg." : "Vabu aegu ei ole. Helista 433 3242.";
+      err.textContent = message;
+      if (message) { const first = $(!pick.service ? 'input[name="service"]' : 'input[name="time"], input[name="day"]', form); if (first) first.focus(); }
+      else if (!okName) name.focus();
+      else if (!okTel) tel.focus();
+      return !message && okName && okTel;
+    }
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!valid()) return;
+      const service = services.find((s) => s.id === pick.service);
+      const day = days.find((d) => d.iso === pick.day);
+      const name = form.elements.namedItem("name").value.trim();
+      const tel = form.elements.namedItem("tel").value.trim();
+      const payload = { service: service.name, price: service.price, stylist: stylist() || "pole vahet", date: pick.day, time: hm(pick.time), name, phone: tel };
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Saadan…";
+      let ok = true;
+      if (BOOKING_ENDPOINT) {
+        try {
+          const reply = await fetch(BOOKING_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) });
+          ok = reply.ok;
+        } catch (error) {
+          ok = false;
+        }
+      }
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Saada broneering";
+      if (!ok) { err.textContent = "Saatmine ei õnnestunud. Proovi uuesti või helista 433 3242."; return; }
+      $("[data-done-title]", form).textContent = `Aitäh, ${name.split(/\s+/)[0]}!`;
+      $("[data-done-what]", form).textContent = `Sinu soov: ${service.name}${stylist() ? ", " + stylist() + " juurde" : ""}, ${day.on} kell ${hm(pick.time)}.`;
+      const after = $("[data-done-next]", form);
+      after.textContent = `Võtame sinuga ühendust numbril ${tel}, et aeg kinnitada.`;
+      after.hidden = !BOOKING_ENDPOINT;
+      $("[data-done-demo]", form).hidden = Boolean(BOOKING_ENDPOINT);
+      formPane.hidden = true;
+      donePane.hidden = false;
+      donePane.focus({ preventScroll: true });
+      refresh();
+    });
+    $("[data-again]", form).addEventListener("click", () => {
+      donePane.hidden = true;
+      formPane.hidden = false;
+      pick.time = null;
+      paintDays();
+      summary();
+      refresh();
+    });
+    paintDays();
+    summary();
+    // A price row picked off the stack travels into the form as the chosen service.
+    for (const row of rows) row.addEventListener("click", () => chooseService(row.dataset.id));
+  }
+
+  /* ------------------------------------------------ in-page links, chrome */
+  let smoother = null;
+  const nav = $("[data-nav]");
+  function refresh() { if (hasGsap) ScrollTrigger.refresh(); }
+  function goTo(target) {
+    if (smoother) smoother.scrollTo(target, true, "top " + (target.id === "avaleht" ? 0 : nav.offsetHeight) + "px");
+    else target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = link.getAttribute("href").slice(1);
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    event.preventDefault();
+    goTo(target);
+    history.pushState(null, "", "#" + id);
+    if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+  });
+
+  const heroLogo = $(".hero .logo");
+  const heroActions = $(".hero__actions");
+  const dock = $("[data-dock]");
+  const covered = new Set();
+  let ticking = false;
+  function paintChrome() {
+    ticking = false;
+    const past = !heroLogo || heroLogo.getBoundingClientRect().bottom < nav.offsetHeight + 8;
+    nav.classList.toggle("is-solid", window.scrollY > window.innerHeight - nav.offsetHeight - 40);
+    nav.classList.toggle("on-dark", !nav.classList.contains("is-solid"));
+    nav.classList.toggle("has-brand", past);
+    if (dock) dock.classList.toggle("is-up", heroActions.getBoundingClientRect().bottom < 0 && covered.size === 0);
+  }
+  window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(paintChrome); } }, { passive: true });
+  window.addEventListener("resize", paintChrome);
+  paintChrome();
+  if ("IntersectionObserver" in window) {
+    // the dock steps aside where the page already offers the same actions: the booking form and the page's foot
+    const watch = new IntersectionObserver((entries) => {
+      for (const entry of entries) { if (entry.isIntersecting) covered.add(entry.target); else covered.delete(entry.target); }
+      paintChrome();
+    }, { rootMargin: "-20% 0px 0px 0px" });
+    for (const el of [$(".booking"), $(".footer")]) if (el) watch.observe(el);
+  }
+
+  /* ---------------------------------------------------------- hero film */
+  // The film is one file per orientation: three clips of the studio, each cross-fading into the next, played a little
+  // slower than filmed. Until it plays (or if it is missing, or the visitor saves data), the three stills carry the picture.
+  const hero = $(".hero");
+  const film = $("[data-film]");
+  const saveData = Boolean(navigator.connection && navigator.connection.saveData);
+  const FILM_SPEED = 0.75;
+  if (film && !reduceMotion && !saveData) {
+    const tall = window.matchMedia("(orientation: portrait)");
+    const load = () => {
+      const src = tall.matches ? film.dataset.tall : film.dataset.wide;
+      if (!src || film.getAttribute("src") === src) return;
+      hero.classList.remove("has-film");
+      film.src = src;
+      const playing = film.play();
+      if (playing && playing.catch) playing.catch(() => {});
+    };
+    film.addEventListener("loadedmetadata", () => { film.playbackRate = FILM_SPEED; });
+    film.addEventListener("playing", () => { film.playbackRate = FILM_SPEED; hero.classList.add("has-film"); });
+    film.addEventListener("error", () => hero.classList.remove("has-film"));
+    if (tall.addEventListener) tall.addEventListener("change", load);
+    load();
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) { const p = film.play(); if (p && p.catch) p.catch(() => {}); } else film.pause();
+      }, { threshold: 0.05 }).observe(hero);
+    }
+  }
+
+  /* ---------------------------------------------------------------- map */
+  const mapBox = $("#kaart");
+  // The spot the owner's side marked in Apple Maps: inside the street wing of the building, first floor up.
+  const HOME = [25.593948, 58.367663];
+  const MAPLIBRE = "https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl";
+  // Redraw the open map style in the floor's graphite.
+  function tintStyle(style) {
+    const c = {
+      land: "#2a2b30", block: "#2e2f35", park: "#2b3029", wood: "#2a2f28", water: "#1c1e23",
+      building: "#3a3c43", buildingEdge: "#474952", road: "#4a4d56", major: "#6f727c", casing: "#222327",
+      rail: "#3c3e45", text: "#dfe2e8", minorText: "#a9acb6", waterText: "#7f8fa3", halo: "#25262a",
+    };
+    for (const layer of style.layers) {
+      const paint = layer.paint || (layer.paint = {});
+      const id = layer.id;
+      if (layer.type === "background") paint["background-color"] = c.land;
+      else if (layer.type === "raster") layer.layout = Object.assign(layer.layout || {}, { visibility: "none" });
+      else if (id === "park") paint["fill-color"] = c.park;
+      else if (id === "landcover_wood") paint["fill-color"] = c.wood;
+      else if (id === "landuse_residential") paint["fill-color"] = c.block;
+      else if (id === "water") paint["fill-color"] = c.water;
+      else if (id === "waterway") paint["line-color"] = c.water;
+      else if (id === "building") { paint["fill-color"] = c.building; paint["fill-outline-color"] = c.buildingEdge; }
+      else if (layer.type === "fill") paint["fill-color"] = c.block;
+      else if (layer.type === "line" && layer["source-layer"] === "transportation") {
+        if (id.includes("rail")) paint["line-color"] = id.includes("dash") ? c.land : c.rail;
+        else if (id.includes("casing")) paint["line-color"] = c.casing;
+        else paint["line-color"] = id.includes("major") || id.includes("motorway") ? c.major : c.road;
+      } else if (layer.type === "line") {
+        paint["line-color"] = c.rail;
+      } else if (layer.type === "symbol") {
+        paint["text-color"] = id.includes("water") ? c.waterText : id.includes("highway") ? c.minorText : c.text;
+        paint["text-halo-color"] = c.halo;
+        paint["text-halo-width"] = 1.5;
+      }
+    }
+    return style;
+  }
+  async function startMap() {
+    try {
+      const style = tintStyle(await (await fetch("https://tiles.openfreemap.org/styles/positron")).json());
+      const map = new maplibregl.Map({
+        container: $("[data-map]"), style, center: HOME, zoom: 13.6, maxZoom: 18.5,
+        attributionControl: { compact: true }, cooperativeGestures: true,
+        locale: {
+          "CooperativeGesturesHandler.WindowsHelpText": "Suumimiseks hoia all Ctrl-klahvi ja keri",
+          "CooperativeGesturesHandler.MacHelpText": "Suumimiseks hoia all ⌘-klahvi ja keri",
+          "CooperativeGesturesHandler.MobileHelpText": "Kaardi liigutamiseks kasuta kahte sõrme",
+          "NavigationControl.ZoomIn": "Suumi sisse",
+          "NavigationControl.ZoomOut": "Suumi välja",
+        },
+      });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      const pin = $("#pin").content.firstElementChild.cloneNode(true);
+      new maplibregl.Marker({ element: pin, anchor: "bottom" }).setLngLat(HOME).addTo(map);
+      map.once("load", () => {
+        mapBox.classList.add("is-live");
+        const arrive = () => {
+          if (reduceMotion) map.easeTo({ center: HOME, zoom: 17, duration: 0 });
+          else map.flyTo({ center: HOME, zoom: 17, duration: 3200, curve: 1.2 });
+        };
+        const seen = new IntersectionObserver((entries) => { if (!entries[0].isIntersecting) return; seen.disconnect(); arrive(); }, { threshold: 0.35 });
+        seen.observe(mapBox);
+      });
+    } catch (error) {
+      mapBox.classList.add("is-failed");
+    }
+  }
+  // The map library is heavy, so it only loads once the map is about to scroll into view.
+  if (mapBox && "IntersectionObserver" in window) {
+    const near = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) return;
+      near.disconnect();
+      const css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = MAPLIBRE + ".css";
+      document.head.appendChild(css);
+      const lib = document.createElement("script");
+      lib.src = MAPLIBRE + ".js";
+      lib.onload = startMap;
+      lib.onerror = () => mapBox.classList.add("is-failed");
+      document.head.appendChild(lib);
+    }, { rootMargin: "900px 0px" });
+    near.observe(mapBox);
+  }
+
+  /* ------------------------------------------------------------- motion */
+  const letGo = () => root.classList.add("is-in");
+  if (!hasGsap || reduceMotion) { letGo(); return; }
+  gsap.registerPlugin(ScrollTrigger);
+  if (typeof window.ScrollSmoother !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    gsap.registerPlugin(ScrollSmoother);
+    smoother = ScrollSmoother.create({ wrapper: "#smooth-wrapper", content: "#smooth-content", smooth: 1, smoothTouch: false, normalizeScroll: false });
+  }
+  // First screen: logo and words rise once; the three blocks land on the shelf from the bottom one up.
+  const heroBlocks = $$(".hero__shelf .block");
+  gsap.set($$(".hero__inner > *"), { autoAlpha: 0, y: 22 });
+  gsap.set(heroBlocks, { autoAlpha: 0, y: -18 });
+  letGo();
+  gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.15 })
+    .to($$(".hero__inner > *"), { autoAlpha: 1, y: 0, duration: 1.2, stagger: 0.12, clearProps: "transform,opacity,visibility" }, 0)
+    .to(heroBlocks, { autoAlpha: 1, y: 0, duration: 0.9, stagger: { each: 0.1, from: "end" }, clearProps: "transform,opacity,visibility" }, 0.55);
+  // Stacks assemble like towels being put on a shelf: the bottom block first, each next one settling on it.
+  for (const group of $$("[data-stack]")) {
+    const blocks = $$(".block, .review", group);
+    gsap.from(blocks, { autoAlpha: 0, y: -16, duration: 0.8, ease: "power3.out", stagger: { each: 0.09, from: "end" }, clearProps: "transform,opacity,visibility", scrollTrigger: { trigger: group, start: "top 86%", once: true } });
+  }
+  // Photographs settle into their frames, slowly.
+  for (const figure of $$("[data-settle]")) {
+    gsap.from($("img", figure), { scale: 1.12, duration: 1.8, ease: "power2.out", clearProps: "transform", scrollTrigger: { trigger: figure, start: "top 88%", once: true } });
+  }
+  const row = $("[data-settle-row]");
+  if (row) gsap.from($$("img", row), { scale: 1.12, duration: 1.8, ease: "power2.out", stagger: 0.1, clearProps: "transform", scrollTrigger: { trigger: row, start: "top 88%", once: true } });
+  window.addEventListener("load", refresh);
+});
+</script>
+</body>
+</html>

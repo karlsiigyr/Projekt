@@ -1,0 +1,4 @@
+# Näidisleht: palub otsimootoritel (Google jt) seda lehte oma tulemustes mitte näidata.
+# Kui leht läheb päriselt kasutusse, kustuta see fail ja laadi kaust uuesti üles.
+/*
+  X-Robots-Tag: noindex
