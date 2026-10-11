@@ -231,6 +231,10 @@
   .booking__done { display: grid; gap: 0.9rem; justify-items: start; }
   .booking__done h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.375rem, 1.4vw + 1rem, 2rem); letter-spacing: -0.02em; }
   .booking__demo { padding: 0.9rem 1.1rem; border-radius: var(--r-s); background: var(--room); color: var(--ink); font-weight: 500; }
+  .booking__note { font-size: 0.9375rem; color: var(--ink-3); }
+  .chips__note { padding-block: 0.7rem; color: var(--ink-3); }
+  /* a field only robots fill in: kept off screen, out of the tab order and away from screen readers */
+  .trap { position: absolute; left: -100vw; width: 1px; height: 1px; overflow: hidden; }
   [hidden] { display: none !important; }
 
   .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
@@ -462,7 +466,8 @@
           </fieldset>
           <fieldset>
             <legend>Juuksur</legend>
-            <div class="chips">
+            <!-- Kui broneerimine on Google Sheetsiga ühendatud, tuleb nimekiri tabeli lehelt „Juuksurid” ja asendab selle. -->
+            <div class="chips" data-stylists>
               <div class="chip"><input type="radio" name="stylist" id="bk-st-rita" value="Rita"><label for="bk-st-rita">Rita</label></div>
               <div class="chip"><input type="radio" name="stylist" id="bk-st-maire" value="Maire"><label for="bk-st-maire">Maire</label></div>
               <div class="chip"><input type="radio" name="stylist" id="bk-st-kaire" value="Kaire"><label for="bk-st-kaire">Kaire</label></div>
@@ -484,6 +489,8 @@
             <div class="field"><label for="bk-name">Nimi</label><input id="bk-name" name="name" type="text" autocomplete="name" aria-describedby="bk-name-err"><p class="field__err" id="bk-name-err"></p></div>
             <div class="field"><label for="bk-tel">Telefon</label><input id="bk-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="bk-tel-err"><p class="field__err" id="bk-tel-err"></p></div>
           </div>
+          <div class="trap" aria-hidden="true"><label for="bk-web">Veebileht</label><input id="bk-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <p class="booking__note">Tasumine kohapeal, sularaha või kaardiga. Nime ja telefoninumbrit kasutame ainult selle broneeringu jaoks.</p>
           <div class="booking__foot">
             <div><p class="booking__sum" data-sum aria-live="polite"></p><p class="booking__err" data-err role="alert"></p></div>
             <button class="btn btn--ink" type="submit" data-send>Saada broneering</button>
@@ -704,12 +711,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cuts.length) for (const el of $$("[data-min-price]")) el.textContent = Math.min(...cuts);
 
   /* ------------------------------------------------------------ booking */
-  // Päris broneeringute vastuvõtja aadress (vormiteenus või oma server, mis võtab vastu JSON POST-i).
+  // Broneeringute vastuvõtja: Google Apps Scripti veebirakenduse aadress (lõpeb /exec), juhend on failis broneerimine/README.md.
   // Tühi väärtus = näidisrežiim: vorm töötab lõpuni, aga ei saada midagi kuhugi.
   const BOOKING_ENDPOINT = "";
+  const SALON_TEL = "433 3242";
   const form = $("[data-booking]");
   if (form) {
     const svcBox = $("[data-service-opts]", form);
+    const stylistBox = $("[data-stylists]", form);
     const dayBox = $("[data-days]", form);
     const timeBox = $("[data-times]", form);
     const sum = $("[data-sum]", form);
@@ -719,6 +728,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const donePane = $("[data-done]", form);
     const pick = { service: null, day: null, time: null };
     let days = [];
+    // The sheet's free hours, { "2026-10-15": { Rita: [8, 9, 12] } }. Until they arrive (or if they never do, or in the demo)
+    // every opening hour is offered, and the sheet still turns away an hour that is gone.
+    let free = null;
+    let loading = Boolean(BOOKING_ENDPOINT);
+    let paused = false;
 
     function chip(name, value, text, extra) {
       const wrap = document.createElement("div");
@@ -735,33 +749,65 @@ document.addEventListener("DOMContentLoaded", () => {
       wrap.append(input, label);
       return wrap;
     }
+    function note(text) {
+      const p = document.createElement("p");
+      p.className = "chips__note";
+      p.textContent = text;
+      return p;
+    }
     services.forEach((s) => svcBox.appendChild(chip("service", s.id, s.name, s.price)));
 
-    // The next six days the door is open, by name (no dates on the page); today only shows times still ahead.
+    const stylist = () => { const on = $('input[name="stylist"]:checked', form); return on ? on.value : ""; };
+    // The sheet's own list of stylists replaces the one written into the page, so a new stylist only needs a row in the sheet.
+    function paintStylists(names) {
+      const chosen = stylist();
+      stylistBox.replaceChildren(...names.map((name) => chip("stylist", name, name)), chip("stylist", "", "Pole vahet"));
+      const inputs = $$('input[name="stylist"]', stylistBox);
+      (inputs.find((input) => input.value === chosen) || inputs[inputs.length - 1]).checked = true;
+    }
+    // A stylist's own link (…/?juuksur=Maire#broneeri) opens the form with that stylist chosen.
+    const wanted = (new URLSearchParams(location.search).get("juuksur") || "").trim().toLowerCase();
+    if (wanted) {
+      const input = $$('input[name="stylist"]', stylistBox).find((i) => i.value.toLowerCase() === wanted);
+      if (input) input.checked = true;
+    }
+
+    // Hours the chosen stylist has free that day, or anyone has when it makes no difference who.
+    function freeHours(iso) {
+      const day = free[iso] || {};
+      const name = stylist();
+      return new Set(name ? day[name] || [] : Object.values(day).flat());
+    }
+    // The next six days with a free hour, by name and date; today only shows times still ahead.
     function openDays() {
       const now = tallinnNow();
       const base = Date.UTC(now.y, now.mo - 1, now.d);
       const out = [];
       for (let i = 0; i < 14 && out.length < 6; i++) {
         const date = new Date(base + i * 86400000);
+        const iso = date.toISOString().slice(0, 10);
         const weekday = date.getUTCDay();
         const hours = HOURS[weekday];
         if (!hours) continue;
+        const open = free ? freeHours(iso) : null;
         const slots = [];
         for (let t = hours[0]; t <= hours[1] - SLOT + 1e-9; t += SLOT) {
           if (i === 0 && t < now.h + now.m / 60 + SLOT) continue;
+          if (open && !open.has(t)) continue;
           slots.push(t);
         }
         if (!slots.length) continue;
         // a weekday a full week away is named as such, so it is never taken for today
         const label = i === 0 ? "Täna" : i === 1 ? "Homme" : i >= 7 ? "Järgmine " + DAY[weekday].toLowerCase() : DAY[weekday];
         const on = i === 0 ? "täna" : i === 1 ? "homme" : i >= 7 ? "järgmisel " + DAY_ON[weekday] : DAY_ON[weekday];
-        out.push({ iso: date.toISOString().slice(0, 10), label, on, slots });
+        const dm = String(date.getUTCDate()).padStart(2, "0") + "." + String(date.getUTCMonth() + 1).padStart(2, "0");
+        out.push({ iso, label, on, dm, slots });
       }
       return out;
     }
     function paintTimes() {
       timeBox.replaceChildren();
+      if (loading) { timeBox.appendChild(note("Laen vabu aegu…")); return; }
       const day = days.find((d) => d.iso === pick.day);
       if (!day) return;
       if (!day.slots.includes(pick.time)) pick.time = null;
@@ -776,21 +822,43 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!days.some((d) => d.iso === pick.day)) { pick.day = days.length ? days[0].iso : null; pick.time = null; }
       dayBox.replaceChildren();
       for (const d of days) {
-        const opt = chip("day", d.iso, d.label);
+        const opt = chip("day", d.iso, d.label, d.dm);
         if (d.iso === pick.day) $("input", opt).checked = true;
         dayBox.appendChild(opt);
       }
+      if (!days.length) dayBox.appendChild(note(stylist() ? `${stylist()} juures ei ole lähipäevil vabu aegu. Vali teine juuksur või helista ${SALON_TEL}.` : `Lähipäevil vabu aegu ei ole. Helista ${SALON_TEL}.`));
       paintTimes();
     }
-    const stylist = () => { const on = $('input[name="stylist"]:checked', form); return on ? on.value : ""; };
     function summary() {
       const service = services.find((s) => s.id === pick.service);
       const day = days.find((d) => d.iso === pick.day);
       const parts = [];
       if (service) parts.push(`${service.name}, ${service.price}`);
       if (stylist()) parts.push(`${stylist()} juurde`);
-      if (day && pick.time !== null) parts.push(`${day.on} kell ${hm(pick.time)}`);
+      if (day && pick.time !== null) parts.push(`${day.on} ${day.dm} kell ${hm(pick.time)}`);
       sum.textContent = parts.join(" · ");
+    }
+    function showPaused() {
+      sendBtn.disabled = paused;
+      if (paused) err.textContent = `Netibroneerimine on praegu suletud. Aja saad kinni panna telefonil ${SALON_TEL}.`;
+    }
+    // Asks the sheet which hours are still free; called on arrival and after every booking sent.
+    async function loadFree() {
+      if (!BOOKING_ENDPOINT) return;
+      try {
+        const reply = await (await fetch(BOOKING_ENDPOINT, { cache: "no-store" })).json();
+        if (!reply.ok) throw new Error(reply.message);
+        free = reply.free || {};
+        paused = Boolean(reply.paused);
+        if (reply.stylists && reply.stylists.length) paintStylists(reply.stylists);
+      } catch (error) {
+        // keep what we had: without it every opening hour is offered and the sheet checks each booking it gets
+      }
+      loading = false;
+      paintDays();
+      summary();
+      showPaused();
+      refresh();
     }
     function chooseService(id) {
       pick.service = id;
@@ -801,9 +869,11 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("change", (event) => {
       const input = event.target;
       if (input.name === "service") pick.service = input.value;
+      else if (input.name === "stylist") { paintDays(); refresh(); }
       else if (input.name === "day") { pick.day = input.value; paintTimes(); }
       else if (input.name === "time") pick.time = Number(input.value);
       err.textContent = "";
+      showPaused();
       summary();
     });
     function fieldError(input, message) {
@@ -812,15 +882,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (message) input.setAttribute("aria-invalid", "true"); else input.removeAttribute("aria-invalid");
       return !message;
     }
+    // An Estonian mobile number, with or without +372: the same rule the sheet keeps.
+    const mobile = (value) => /^[58]\d{6,7}$/.test(value.replace(/\D/g, "").replace(/^(00)?372(?=\d{7,8}$)/, ""));
     function valid() {
       const name = form.elements.namedItem("name");
       const tel = form.elements.namedItem("tel");
-      const digits = tel.value.replace(/\D/g, "");
       const okName = fieldError(name, name.value.trim().length < 2 ? "Kirjuta oma nimi." : "");
-      const okTel = fieldError(tel, digits.length < 7 || digits.length > 15 ? "Kirjuta telefoninumber, millelt sind kätte saame." : "");
+      const okTel = fieldError(tel, mobile(tel.value) ? "" : "Kirjuta Eesti mobiilinumber, näiteks 5123 4567.");
       let message = "";
       if (!pick.service) message = "Vali teenus.";
-      else if (!pick.day || pick.time === null) message = days.length ? "Vali päev ja kellaaeg." : "Vabu aegu ei ole. Helista 433 3242.";
+      else if (!pick.day || pick.time === null) message = loading ? "Vabad ajad alles laadivad, oota hetk." : days.length ? "Vali päev ja kellaaeg." : `Vabu aegu ei ole. Helista ${SALON_TEL}.`;
       err.textContent = message;
       if (message) { const first = $(!pick.service ? 'input[name="service"]' : 'input[name="time"], input[name="day"]', form); if (first) first.focus(); }
       else if (!okName) name.focus();
@@ -829,28 +900,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      if (!valid()) return;
+      if (paused || !valid()) return;
       const service = services.find((s) => s.id === pick.service);
       const day = days.find((d) => d.iso === pick.day);
       const name = form.elements.namedItem("name").value.trim();
       const tel = form.elements.namedItem("tel").value.trim();
-      const payload = { service: service.name, price: service.price, stylist: stylist() || "pole vahet", date: pick.day, time: hm(pick.time), name, phone: tel };
+      const payload = { service: service.name, price: service.price, stylist: stylist(), date: pick.day, time: hm(pick.time), name, phone: tel, website: form.elements.namedItem("website").value };
       sendBtn.disabled = true;
       sendBtn.textContent = "Saadan…";
-      let ok = true;
+      let reply = { ok: true, stylist: stylist() };
       if (BOOKING_ENDPOINT) {
         try {
-          const reply = await fetch(BOOKING_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) });
-          ok = reply.ok;
+          // Sent as plain text: the browser then posts straight to Google without a CORS preflight, which Apps Script cannot answer.
+          const res = await fetch(BOOKING_ENDPOINT, { method: "POST", body: JSON.stringify(payload), signal: AbortSignal.timeout ? AbortSignal.timeout(30000) : undefined });
+          reply = await res.json();
         } catch (error) {
-          ok = false;
+          reply = { ok: false };
         }
       }
-      sendBtn.disabled = false;
       sendBtn.textContent = "Saada broneering";
-      if (!ok) { err.textContent = "Saatmine ei õnnestunud. Proovi uuesti või helista 433 3242."; return; }
+      sendBtn.disabled = false;
+      if (!reply.ok) {
+        err.textContent = reply.message || `Saatmine ei õnnestunud. Proovi uuesti või helista ${SALON_TEL}.`;
+        if (reply.error === "phone") fieldError(form.elements.namedItem("tel"), reply.message);
+        // an hour taken meanwhile, a stylist gone from the list, the booking paused: show the sheet as it is now
+        if (["taken", "stylist", "paused"].includes(reply.error)) loadFree();
+        return;
+      }
+      const who = reply.stylist || stylist();
       $("[data-done-title]", form).textContent = `Aitäh, ${name.split(/\s+/)[0]}!`;
-      $("[data-done-what]", form).textContent = `Sinu soov: ${service.name}${stylist() ? ", " + stylist() + " juurde" : ""}, ${day.on} kell ${hm(pick.time)}.`;
+      $("[data-done-what]", form).textContent = `Sinu soov: ${service.name}${who ? ", " + who + " juurde" : ""}, ${day.on} ${day.dm} kell ${hm(pick.time)}.`;
       const after = $("[data-done-next]", form);
       after.textContent = `Võtame sinuga ühendust numbril ${tel}, et aeg kinnitada.`;
       after.hidden = !BOOKING_ENDPOINT;
@@ -859,6 +938,7 @@ document.addEventListener("DOMContentLoaded", () => {
       donePane.hidden = false;
       donePane.focus({ preventScroll: true });
       refresh();
+      loadFree();
     });
     $("[data-again]", form).addEventListener("click", () => {
       donePane.hidden = true;
@@ -870,6 +950,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     paintDays();
     summary();
+    loadFree();
     // A price row picked off the stack travels into the form as the chosen service.
     for (const row of rows) row.addEventListener("click", () => chooseService(row.dataset.id));
   }
